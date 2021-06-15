@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 /**
  * 驾驶员状态监测
  */
-public class AlarmDSM {
+public class AlarmDSM implements Alarm {
 
     public static final int id = 0x65;
 
@@ -40,7 +40,8 @@ public class AlarmDSM {
         this.serialNo = serialNo;
     }
 
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态")
+    /** 该字段仅适用于有开始和结束标志类型的报警或事件,报警类型或事件类型无开始和结束标志,则该位不可用,填入0x00即可 */
+    @Field(index = 4, type = DataType.BYTE, desc = "标志状态: 0.不可用 1.开始标志 2.结束标志")
     public int getState() {
         return state;
     }
@@ -49,7 +50,16 @@ public class AlarmDSM {
         this.state = state;
     }
 
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型")
+    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型:\n" +
+            "0x01:疲劳驾驶报警\n" +
+            "0x02:接打电话报警\n" +
+            "0x03:抽烟报警\n" +
+            "0x04:分神驾驶报警\n" +
+            "0x05:驾驶员异常报警\n" +
+            "0x06~0x0F:用户自定义\n" +
+            "0x10:自动抓拍事件\n" +
+            "0x11:驾驶员变更事件\n" +
+            "0x12~0x1F:用户自定义")
     public int getType() {
         return type;
     }
@@ -146,5 +156,25 @@ public class AlarmDSM {
 
     public void setAlarmId(AlarmId alarmId) {
         this.alarmId = alarmId;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("AlarmDSM{");
+        sb.append("serialNo=").append(serialNo);
+        sb.append(", state=").append(state);
+        sb.append(", type=").append(type);
+        sb.append(", level=").append(level);
+        sb.append(", fatigueDegree=").append(fatigueDegree);
+        sb.append(", reserved=").append(reserved);
+        sb.append(", speed=").append(speed);
+        sb.append(", altitude=").append(altitude);
+        sb.append(", latitude=").append(latitude);
+        sb.append(", longitude=").append(longitude);
+        sb.append(", dateTime=").append(dateTime);
+        sb.append(", status=").append(status);
+        sb.append(", alarmId=").append(alarmId);
+        sb.append('}');
+        return sb.toString();
     }
 }

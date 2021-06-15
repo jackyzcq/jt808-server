@@ -19,9 +19,9 @@ import java.util.Map;
 @Message({JT808.位置信息查询应答, JT808.车辆控制应答})
 public class T0201_0500 extends JTMessage implements Response {
 
-    private int serialNo;
-    private int warningMark;
-    private int status;
+    private int responseSerialNo;
+    private int warnBit;
+    private int statusBit;
     private int latitude;
     private int longitude;
     private int altitude;
@@ -31,30 +31,30 @@ public class T0201_0500 extends JTMessage implements Response {
     private Map<Integer, Object> attributes;
 
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
-    public int getSerialNo() {
-        return serialNo;
+    public int getResponseSerialNo() {
+        return responseSerialNo;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setResponseSerialNo(int responseSerialNo) {
+        this.responseSerialNo = responseSerialNo;
     }
 
     @Field(index = 2, type = DataType.DWORD, desc = "报警标志")
-    public int getWarningMark() {
-        return warningMark;
+    public int getWarnBit() {
+        return warnBit;
     }
 
-    public void setWarningMark(int warningMark) {
-        this.warningMark = warningMark;
+    public void setWarnBit(int warnBit) {
+        this.warnBit = warnBit;
     }
 
     @Field(index = 6, type = DataType.DWORD, desc = "状态")
-    public int getStatus() {
-        return status;
+    public int getStatusBit() {
+        return statusBit;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setStatusBit(int statusBit) {
+        this.statusBit = statusBit;
     }
 
     @Field(index = 10, type = DataType.DWORD, desc = "纬度")

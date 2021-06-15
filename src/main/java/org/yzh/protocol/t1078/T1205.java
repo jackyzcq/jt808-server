@@ -14,17 +14,17 @@ import java.util.List;
 @Message(JT1078.终端上传音视频资源列表)
 public class T1205 extends JTMessage implements Response {
 
-    private int serialNo;
+    private int responseSerialNo;
     private int count;
     private List<Item> items;
 
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
-    public int getSerialNo() {
-        return serialNo;
+    public int getResponseSerialNo() {
+        return responseSerialNo;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setResponseSerialNo(int responseSerialNo) {
+        this.responseSerialNo = responseSerialNo;
     }
 
     @Field(index = 2, type = DataType.DWORD, desc = "音视频资源总数")
@@ -50,7 +50,7 @@ public class T1205 extends JTMessage implements Response {
         private int channelNo;
         private LocalDateTime startTime;
         private LocalDateTime endTime;
-        private byte[] warningMark;
+        private int[] warnBit;
         private int mediaType;
         private int streamType = 1;
         private int memoryType;
@@ -59,11 +59,11 @@ public class T1205 extends JTMessage implements Response {
         public Item() {
         }
 
-        public Item(int channelNo, LocalDateTime startTime, LocalDateTime endTime, byte[] warningMark, int mediaType, int streamType, int memoryType, long size) {
+        public Item(int channelNo, LocalDateTime startTime, LocalDateTime endTime, int[] warnBit, int mediaType, int streamType, int memoryType, long size) {
             this.channelNo = channelNo;
             this.startTime = startTime;
             this.endTime = endTime;
-            this.warningMark = warningMark;
+            this.warnBit = warnBit;
             this.mediaType = mediaType;
             this.streamType = streamType;
             this.memoryType = memoryType;
@@ -97,13 +97,13 @@ public class T1205 extends JTMessage implements Response {
             this.endTime = endTime;
         }
 
-        @Field(index = 13, length = 8, type = DataType.BYTES, desc = "报警标志")
-        public byte[] getWarningMark() {
-            return warningMark;
+        @Field(index = 13, length = 8, type = DataType.DWORD, desc = "报警标志")
+        public int[] getWarnBit() {
+            return warnBit;
         }
 
-        public void setWarningMark(byte[] warningMark) {
-            this.warningMark = warningMark;
+        public void setWarnBit(int[] warnBit) {
+            this.warnBit = warnBit;
         }
 
         @Field(index = 21, type = DataType.BYTE, desc = "音视频资源类型")
@@ -149,7 +149,7 @@ public class T1205 extends JTMessage implements Response {
             sb.append("channelNo=").append(channelNo);
             sb.append(", startTime='").append(startTime).append('\'');
             sb.append(", endTime='").append(endTime).append('\'');
-            sb.append(", warningMark=").append(Arrays.toString(warningMark));
+            sb.append(", warnBit=").append(Arrays.toString(warnBit));
             sb.append(", mediaType=").append(mediaType);
             sb.append(", streamType=").append(streamType);
             sb.append(", memoryType=").append(memoryType);

@@ -4,7 +4,6 @@ import io.github.yezhihao.netmc.core.model.Response;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
-import org.yzh.protocol.basics.Header;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 
@@ -15,40 +14,32 @@ import org.yzh.protocol.commons.JT808;
 @Message(JT808.终端注册应答)
 public class T8100 extends JTMessage implements Response {
 
-    /** 0：成功 */
+    /** 0.成功 */
     public static final int Success = 0;
-    /** 1：车辆已被注册 */
+    /** 1.车辆已被注册 */
     public static final int AlreadyRegisteredVehicle = 1;
-    /** 2：数据库中无该车辆 */
+    /** 2.数据库中无该车辆 */
     public static final int NotFoundVehicle = 2;
-    /** 3：终端已被注册 */
+    /** 3.终端已被注册 */
     public static final int AlreadyRegisteredTerminal = 3;
-    /** 4：数据库中无该终端 */
+    /** 4.数据库中无该终端 */
     public static final int NotFoundTerminal = 4;
 
-    private int serialNo;
+    private int responseSerialNo;
     private int resultCode;
     private String token;
 
-    public T8100() {
-    }
-
-    public T8100(int serialNo, String mobileNo) {
-        super(new Header(JT808.终端注册应答, serialNo, mobileNo));
-    }
-
     /** 对应的终端注册消息的流水号 */
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
-    public int getSerialNo() {
-        return serialNo;
+    public int getResponseSerialNo() {
+        return responseSerialNo;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setResponseSerialNo(int responseSerialNo) {
+        this.responseSerialNo = responseSerialNo;
     }
 
-    /** 0-4 */
-    @Field(index = 2, type = DataType.BYTE, desc = "结果")
+    @Field(index = 2, type = DataType.BYTE, desc = "结果: 0.成功 1.车辆已被注册 2.数据库中无该车辆 3.终端已被注册 4.数据库中无该终端")
     public int getResultCode() {
         return resultCode;
     }

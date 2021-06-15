@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 轮胎气压监测系统
  */
-public class AlarmTPMS {
+public class AlarmTPMS implements Alarm {
 
     public static final int id = 0x66;
 
@@ -29,6 +29,17 @@ public class AlarmTPMS {
     private AlarmId alarmId;
     private int total;
     private List<Item> items;
+
+
+    @Override
+    public int getType() {
+        return id;
+    }
+
+    @Override
+    public int getLevel() {
+        return 0;
+    }
 
     @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
     public long getSerialNo() {
@@ -194,5 +205,35 @@ public class AlarmTPMS {
         public void setBatteryLevel(int batteryLevel) {
             this.batteryLevel = batteryLevel;
         }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder("Item{");
+            sb.append("position=").append(position);
+            sb.append(", type=").append(type);
+            sb.append(", pressure=").append(pressure);
+            sb.append(", temperature=").append(temperature);
+            sb.append(", batteryLevel=").append(batteryLevel);
+            sb.append('}');
+            return sb.toString();
+        }
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("AlarmTPMS{");
+        sb.append("serialNo=").append(serialNo);
+        sb.append(", state=").append(state);
+        sb.append(", speed=").append(speed);
+        sb.append(", altitude=").append(altitude);
+        sb.append(", latitude=").append(latitude);
+        sb.append(", longitude=").append(longitude);
+        sb.append(", dateTime=").append(dateTime);
+        sb.append(", status=").append(status);
+        sb.append(", alarmId=").append(alarmId);
+        sb.append(", total=").append(total);
+        sb.append(", items=").append(items);
+        sb.append('}');
+        return sb.toString();
     }
 }

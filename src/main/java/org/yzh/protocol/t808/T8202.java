@@ -3,7 +3,6 @@ package org.yzh.protocol.t808;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
-import org.yzh.protocol.basics.Header;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 
@@ -20,13 +19,12 @@ public class T8202 extends JTMessage {
     public T8202() {
     }
 
-    public T8202(Header header, int interval, int validityPeriod) {
-        super(header);
+    public T8202(int interval, int validityPeriod) {
         this.interval = interval;
         this.validityPeriod = validityPeriod;
     }
 
-    @Field(index = 0, type = DataType.WORD, desc = "时间间隔（秒）")
+    @Field(index = 0, type = DataType.WORD, desc = "时间间隔(秒)")
     public int getInterval() {
         return interval;
     }
@@ -35,7 +33,7 @@ public class T8202 extends JTMessage {
         this.interval = interval;
     }
 
-    @Field(index = 2, type = DataType.DWORD, desc = "有效期（秒）")
+    @Field(index = 2, type = DataType.DWORD, desc = "有效期(秒)")
     public int getValidityPeriod() {
         return validityPeriod;
     }

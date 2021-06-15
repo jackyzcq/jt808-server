@@ -5,8 +5,8 @@ json1 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 3,
+    "serialNo": 1,
+    "fileTotal": 3,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -27,8 +27,8 @@ json2 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 3,
+    "serialNo": 1,
+    "fileTotal": 3,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -49,8 +49,8 @@ json1 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 3,
+    "serialNo": 1,
+    "fileTotal": 3,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -71,8 +71,8 @@ json2 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 3,
+    "serialNo": 1,
+    "fileTotal": 3,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -151,8 +151,8 @@ json1 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 1,
+    "serialNo": 1,
+    "fileTotal": 1,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -191,8 +191,8 @@ json2 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 1,
+    "serialNo": 1,
+    "fileTotal": 1,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -231,8 +231,8 @@ json1 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 1,
+    "serialNo": 1,
+    "fileTotal": 1,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -271,8 +271,8 @@ json2 {
   "alarmId": {
     "deviceId": "qwe123",
     "dateTime": "200827111111",
-    "order": 1,
-    "total": 1,
+    "serialNo": 1,
+    "fileTotal": 1,
     "reserved": 1
   },
   "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
@@ -505,20 +505,14 @@ json2 {
 }
 hex1 7e1205003e0123456789017fff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800de7e
 json1 {
-  "serialNo": 4321,
+  "responseSerialNo": 4321,
   "count": 2,
   "items": [
     {
       "channelNo": 1,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -531,13 +525,7 @@ json1 {
       "channelNo": 2,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -558,20 +546,14 @@ json1 {
 }
 hex2 7e1205003e0123456789017fff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800de7e
 json2 {
-  "serialNo": 4321,
+  "responseSerialNo": 4321,
   "count": 2,
   "items": [
     {
       "channelNo": 1,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -584,13 +566,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -611,20 +587,14 @@ json2 {
 }
 hex1 7e1205403e0100000000017299841738ffff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800d67e
 json1 {
-  "serialNo": 4321,
+  "responseSerialNo": 4321,
   "count": 2,
   "items": [
     {
       "channelNo": 1,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -637,13 +607,7 @@ json1 {
       "channelNo": 2,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -664,20 +628,14 @@ json1 {
 }
 hex2 7e1205403e0100000000017299841738ffff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800d67e
 json2 {
-  "serialNo": 4321,
+  "responseSerialNo": 4321,
   "count": 2,
   "items": [
     {
       "channelNo": 1,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -690,13 +648,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-01-01T00:00:00",
       "endTime": "2020-12-31T23:59:59",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -717,7 +669,7 @@ json2 {
 }
 hex1 7e120600030123456789017fff1b8a018f7e
 json1 {
-  "serialNo": 7050,
+  "responseSerialNo": 7050,
   "result": 1,
   "header": {
     "messageId": 4614,
@@ -730,7 +682,7 @@ json1 {
 }
 hex2 7e120600030123456789017fff1b8a018f7e
 json2 {
-  "serialNo": 7050,
+  "responseSerialNo": 7050,
   "result": 1,
   "header": {
     "messageId": 4614,
@@ -743,7 +695,7 @@ json2 {
 }
 hex1 7e120640030100000000017299841738ffff1b8a01877e
 json1 {
-  "serialNo": 7050,
+  "responseSerialNo": 7050,
   "result": 1,
   "header": {
     "messageId": 4614,
@@ -756,7 +708,7 @@ json1 {
 }
 hex2 7e120640030100000000017299841738ffff1b8a01877e
 json2 {
-  "serialNo": 7050,
+  "responseSerialNo": 7050,
   "result": 1,
   "header": {
     "messageId": 4614,
@@ -1100,13 +1052,7 @@ json1 {
   "channelNo": 231,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1127,13 +1073,7 @@ json2 {
   "channelNo": 231,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1154,13 +1094,7 @@ json1 {
   "channelNo": 231,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1181,13 +1115,7 @@ json2 {
   "channelNo": 231,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1213,13 +1141,7 @@ json1 {
   "channelNo": 1,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1246,13 +1168,7 @@ json2 {
   "channelNo": 1,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1279,13 +1195,7 @@ json1 {
   "channelNo": 1,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1312,13 +1222,7 @@ json2 {
   "channelNo": 1,
   "startTime": "200707192359",
   "endTime": "200707192359",
-  "warningMark": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+  "warnBit": [
     0,
     0
   ],
@@ -1337,7 +1241,7 @@ json2 {
 }
 hex1 7e920700030123456789017fff69fd02087e
 json1 {
-  "serialNo": 27133,
+  "responseSerialNo": 27133,
   "command": 2,
   "header": {
     "messageId": 37383,
@@ -1350,7 +1254,7 @@ json1 {
 }
 hex2 7e920700030123456789017fff69fd02087e
 json2 {
-  "serialNo": 27133,
+  "responseSerialNo": 27133,
   "command": 2,
   "header": {
     "messageId": 37383,
@@ -1363,7 +1267,7 @@ json2 {
 }
 hex1 7e920740030100000000017299841738ffff69fd02007e
 json1 {
-  "serialNo": 27133,
+  "responseSerialNo": 27133,
   "command": 2,
   "header": {
     "messageId": 37383,
@@ -1376,7 +1280,7 @@ json1 {
 }
 hex2 7e920740030100000000017299841738ffff69fd02007e
 json2 {
-  "serialNo": 27133,
+  "responseSerialNo": 27133,
   "command": 2,
   "header": {
     "messageId": 37383,
@@ -1495,13 +1399,13 @@ json2 {
     "verified": true
   }
 }
-hex1 7e000100050123456789017fff007b01c803bd7e
+hex1 7e800100050123456789017fff007b01c8033d7e
 json1 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
-    "messageId": 1,
+    "messageId": 32769,
     "properties": 5,
     "versionNo": 0,
     "mobileNo": "12345678901",
@@ -1509,13 +1413,13 @@ json1 {
     "verified": true
   }
 }
-hex2 7e000100050123456789017fff007b01c803bd7e
+hex2 7e800100050123456789017fff007b01c8033d7e
 json2 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
-    "messageId": 1,
+    "messageId": 32769,
     "properties": 5,
     "versionNo": 0,
     "mobileNo": "12345678901",
@@ -1523,13 +1427,13 @@ json2 {
     "verified": true
   }
 }
-hex1 7e000140050100000000017299841738ffff007b01c803b57e
+hex1 7e800140050100000000017299841738ffff007b01c803357e
 json1 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
-    "messageId": 1,
+    "messageId": 32769,
     "properties": 16389,
     "versionNo": 1,
     "mobileNo": "17299841738",
@@ -1537,13 +1441,13 @@ json1 {
     "verified": true
   }
 }
-hex2 7e000140050100000000017299841738ffff007b01c803b57e
+hex2 7e800140050100000000017299841738ffff007b01c803357e
 json2 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
-    "messageId": 1,
+    "messageId": 32769,
     "properties": 16389,
     "versionNo": 1,
     "mobileNo": "17299841738",
@@ -1721,7 +1625,7 @@ json2 {
 }
 hex1 7e0104005a0123456789017fff00680200000075150101000101000000010202000202000000020003030000f364380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f17e
 json1 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 2,
   "parameters": {
     "117": {
@@ -1797,7 +1701,7 @@ json1 {
 }
 hex2 7e0104005a0123456789017fff00680200000075150101000101000000010202000202000000020003030000f364380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f17e
 json2 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 2,
   "parameters": {
     "117": {
@@ -1873,7 +1777,7 @@ json2 {
 }
 hex1 7e0104405a0100000000017299841738ffff00680200000075150101000101000000010202000202000000020003030000f364380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f97e
 json1 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 2,
   "parameters": {
     "117": {
@@ -1949,7 +1853,7 @@ json1 {
 }
 hex2 7e0104405a0100000000017299841738ffff00680200000075150101000101000000010202000202000000020003030000f364380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f97e
 json2 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 2,
   "parameters": {
     "117": {
@@ -2157,8 +2061,8 @@ json2 {
 }
 hex1 7e020000800123456789017fff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e373737000000000000000000000000000000000000000000000000000000060200021105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e310128917e
 json1 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -2236,8 +2140,8 @@ json1 {
 }
 hex2 7e020000800123456789017fff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e373737000000000000000000000000000000000000000000000000000000060200021105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e310128917e
 json2 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -2315,8 +2219,8 @@ json2 {
 }
 hex1 7e020040800100000000017299841738ffff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e373737000000000000000000000000000000000000000000000000000000060200021105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e310128997e
 json1 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -2394,8 +2298,8 @@ json1 {
 }
 hex2 7e020040800100000000017299841738ffff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e373737000000000000000000000000000000000000000000000000000000060200021105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e310128997e
 json2 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -2521,7 +2425,7 @@ json2 {
 }
 hex1 7e030200030123456789017fffef447fde7e
 json1 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -2534,7 +2438,7 @@ json1 {
 }
 hex2 7e030200030123456789017fffef447fde7e
 json2 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -2547,7 +2451,7 @@ json2 {
 }
 hex1 7e030240030100000000017299841738ffffef447fd67e
 json1 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -2560,7 +2464,7 @@ json1 {
 }
 hex2 7e030240030100000000017299841738ffffef447fd67e
 json2 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -2702,8 +2606,8 @@ json1 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2714,8 +2618,8 @@ json1 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2726,8 +2630,8 @@ json1 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2738,8 +2642,8 @@ json1 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2765,8 +2669,8 @@ json2 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2777,8 +2681,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2789,8 +2693,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2801,8 +2705,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2828,8 +2732,8 @@ json1 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2840,8 +2744,8 @@ json1 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2852,8 +2756,8 @@ json1 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2864,8 +2768,8 @@ json1 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2891,8 +2795,8 @@ json2 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2903,8 +2807,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -2915,8 +2819,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -2927,8 +2831,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3295,8 +3199,8 @@ json1 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -3328,8 +3232,8 @@ json2 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -3361,8 +3265,8 @@ json1 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -3394,8 +3298,8 @@ json2 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -3421,7 +3325,7 @@ json2 {
 }
 hex1 7e080200900123456789017fff007b000400000001010101000004000000080006eeb6ad02633df70138000300632007071923590000000201010100000800000010000ddd6d5a04c67bee0270000600c621070719235900000003010101000004000000080006eeb6ad02633df70138000300632007071923590000000401010100000800000010000ddd6d5a04c67bee0270000600c6210707192359e97e
 json1 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -3430,8 +3334,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3446,8 +3350,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3462,8 +3366,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3478,8 +3382,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3500,7 +3404,7 @@ json1 {
 }
 hex2 7e080200900123456789017fff007b000400000001010101000004000000080006eeb6ad02633df70138000300632007071923590000000201010100000800000010000ddd6d5a04c67bee0270000600c621070719235900000003010101000004000000080006eeb6ad02633df70138000300632007071923590000000401010100000800000010000ddd6d5a04c67bee0270000600c6210707192359e97e
 json2 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -3509,8 +3413,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3525,8 +3429,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3541,8 +3445,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3557,8 +3461,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3579,7 +3483,7 @@ json2 {
 }
 hex1 7e080240900100000000017299841738ffff007b000400000001010101000004000000080006eeb6ad02633df70138000300632007071923590000000201010100000800000010000ddd6d5a04c67bee0270000600c621070719235900000003010101000004000000080006eeb6ad02633df70138000300632007071923590000000401010100000800000010000ddd6d5a04c67bee0270000600c6210707192359e17e
 json1 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -3588,8 +3492,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3604,8 +3508,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3620,8 +3524,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3636,8 +3540,8 @@ json1 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3658,7 +3562,7 @@ json1 {
 }
 hex2 7e080240900100000000017299841738ffff007b000400000001010101000004000000080006eeb6ad02633df70138000300632007071923590000000201010100000800000010000ddd6d5a04c67bee0270000600c621070719235900000003010101000004000000080006eeb6ad02633df70138000300632007071923590000000401010100000800000010000ddd6d5a04c67bee0270000600c6210707192359e17e
 json2 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -3667,8 +3571,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3683,8 +3587,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3699,8 +3603,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -3715,8 +3619,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 2048,
-        "status": 4096,
+        "warnBit": 2048,
+        "statusBit": 4096,
         "latitude": 232615258,
         "longitude": 80116718,
         "altitude": 624,
@@ -3737,7 +3641,7 @@ json2 {
 }
 hex1 7e080500290123456789017ffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009107e
 json1 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -3762,7 +3666,7 @@ json1 {
 }
 hex2 7e080500290123456789017ffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009107e
 json2 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -3787,7 +3691,7 @@ json2 {
 }
 hex1 7e080540290100000000017299841738fffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009187e
 json1 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -3812,7 +3716,7 @@ json1 {
 }
 hex2 7e080540290100000000017299841738fffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009187e
 json2 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -3929,7 +3833,7 @@ json2 {
 }
 hex1 7e0005000c0123456789017fff109909010203040506070809807e
 json1 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -3953,7 +3857,7 @@ json1 {
 }
 hex2 7e0005000c0123456789017fff109909010203040506070809807e
 json2 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -3977,7 +3881,7 @@ json2 {
 }
 hex1 7e0005400c0100000000017299841738ffff109909010203040506070809887e
 json1 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -4001,7 +3905,7 @@ json1 {
 }
 hex2 7e0005400c0100000000017299841738ffff109909010203040506070809887e
 json2 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -4025,7 +3929,7 @@ json2 {
 }
 hex1 7e8100001e0123456789017fff970c00636877443053453166636877443053453166636877443053453166457e
 json1 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -4039,7 +3943,7 @@ json1 {
 }
 hex2 7e8100001e0123456789017fff970c00636877443053453166636877443053453166636877443053453166457e
 json2 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -4053,7 +3957,7 @@ json2 {
 }
 hex1 7e8100401e0100000000017299841738ffff970c006368774430534531666368774430534531666368774430534531664d7e
 json1 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -4067,7 +3971,7 @@ json1 {
 }
 hex2 7e8100401e0100000000017299841738ffff970c006368774430534531666368774430534531666368774430534531664d7e
 json2 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -4665,7 +4569,7 @@ json2 {
 }
 hex1 7e820300060123456789017fff007b00009d5e377e
 json1 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -4678,7 +4582,7 @@ json1 {
 }
 hex2 7e820300060123456789017fff007b00009d5e377e
 json2 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -4691,7 +4595,7 @@ json2 {
 }
 hex1 7e820340060100000000017299841738ffff007b00009d5e3f7e
 json1 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -4704,7 +4608,7 @@ json1 {
 }
 hex2 7e820340060100000000017299841738ffff007b00009d5e3f7e
 json2 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -7011,9 +6915,9 @@ json2 {
 }
 hex1 7e0201001e0123456789017fff686200002a5a000074280000a3e50000db4fbc732711012c200707192359767e
 json1 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -7031,9 +6935,9 @@ json1 {
 }
 hex2 7e0201001e0123456789017fff686200002a5a000074280000a3e50000db4fbc732711012c200707192359767e
 json2 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -7051,9 +6955,9 @@ json2 {
 }
 hex1 7e0201401e0100000000017299841738ffff686200002a5a000074280000a3e50000db4fbc732711012c2007071923597d027e
 json1 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -7071,9 +6975,9 @@ json1 {
 }
 hex2 7e0201401e0100000000017299841738ffff686200002a5a000074280000a3e50000db4fbc732711012c2007071923597d027e
 json2 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -7839,8 +7743,8 @@ json2 {
 }
 hex1 7e020000d40123456789017fff000004000000080006eeb6ad02633df7013800030063200707192359642f000000400101010a0a01010a0a00640001b2070003640e200707192359000100000061646173200827111111010101652f0000004102020214000000141400c8000516150006c81c20070719235900020000000064736d200827111111020202662900000042031e012c00087a23000a2c2a200707192359000300000074706d73200827111111030303006729000000430404280190000bde31000d9038200707192359000400000000627364200827111111040404b57e
 json1 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -7867,8 +7771,8 @@ json1 {
       "alarmId": {
         "deviceId": "adas",
         "dateTime": "200827111111",
-        "order": 1,
-        "total": 1,
+        "serialNo": 1,
+        "fileTotal": 1,
         "reserved": 1
       }
     },
@@ -7888,8 +7792,8 @@ json1 {
       "alarmId": {
         "deviceId": "dsm",
         "dateTime": "200827111111",
-        "order": 2,
-        "total": 2,
+        "serialNo": 2,
+        "fileTotal": 2,
         "reserved": 2
       }
     },
@@ -7905,8 +7809,8 @@ json1 {
       "alarmId": {
         "deviceId": "tpms",
         "dateTime": "200827111111",
-        "order": 3,
-        "total": 3,
+        "serialNo": 3,
+        "fileTotal": 3,
         "reserved": 3
       },
       "total": 0
@@ -7924,8 +7828,8 @@ json1 {
       "alarmId": {
         "deviceId": "bsd",
         "dateTime": "200827111111",
-        "order": 4,
-        "total": 4,
+        "serialNo": 4,
+        "fileTotal": 4,
         "reserved": 4
       }
     }
@@ -7941,8 +7845,8 @@ json1 {
 }
 hex2 7e020000d40123456789017fff000004000000080006eeb6ad02633df7013800030063200707192359642f000000400101010a0a01010a0a00640001b2070003640e200707192359000100000061646173200827111111010101652f0000004102020214000000141400c8000516150006c81c20070719235900020000000064736d200827111111020202662900000042031e012c00087a23000a2c2a200707192359000300000074706d73200827111111030303006729000000430404280190000bde31000d9038200707192359000400000000627364200827111111040404b57e
 json2 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -7969,8 +7873,8 @@ json2 {
       "alarmId": {
         "deviceId": "adas",
         "dateTime": "200827111111",
-        "order": 1,
-        "total": 1,
+        "serialNo": 1,
+        "fileTotal": 1,
         "reserved": 1
       }
     },
@@ -7990,8 +7894,8 @@ json2 {
       "alarmId": {
         "deviceId": "dsm",
         "dateTime": "200827111111",
-        "order": 2,
-        "total": 2,
+        "serialNo": 2,
+        "fileTotal": 2,
         "reserved": 2
       }
     },
@@ -8007,8 +7911,8 @@ json2 {
       "alarmId": {
         "deviceId": "tpms",
         "dateTime": "200827111111",
-        "order": 3,
-        "total": 3,
+        "serialNo": 3,
+        "fileTotal": 3,
         "reserved": 3
       },
       "total": 0
@@ -8026,8 +7930,8 @@ json2 {
       "alarmId": {
         "deviceId": "bsd",
         "dateTime": "200827111111",
-        "order": 4,
-        "total": 4,
+        "serialNo": 4,
+        "fileTotal": 4,
         "reserved": 4
       }
     }
@@ -8043,8 +7947,8 @@ json2 {
 }
 hex1 7e020040d40100000000017299841738ffff000004000000080006eeb6ad02633df7013800030063200707192359642f000000400101010a0a01010a0a00640001b2070003640e200707192359000100000061646173200827111111010101652f0000004102020214000000141400c8000516150006c81c20070719235900020000000064736d200827111111020202662900000042031e012c00087a23000a2c2a200707192359000300000074706d73200827111111030303006729000000430404280190000bde31000d9038200707192359000400000000627364200827111111040404bd7e
 json1 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -8071,8 +7975,8 @@ json1 {
       "alarmId": {
         "deviceId": "adas",
         "dateTime": "200827111111",
-        "order": 1,
-        "total": 1,
+        "serialNo": 1,
+        "fileTotal": 1,
         "reserved": 1
       }
     },
@@ -8092,8 +7996,8 @@ json1 {
       "alarmId": {
         "deviceId": "dsm",
         "dateTime": "200827111111",
-        "order": 2,
-        "total": 2,
+        "serialNo": 2,
+        "fileTotal": 2,
         "reserved": 2
       }
     },
@@ -8109,8 +8013,8 @@ json1 {
       "alarmId": {
         "deviceId": "tpms",
         "dateTime": "200827111111",
-        "order": 3,
-        "total": 3,
+        "serialNo": 3,
+        "fileTotal": 3,
         "reserved": 3
       },
       "total": 0
@@ -8128,8 +8032,8 @@ json1 {
       "alarmId": {
         "deviceId": "bsd",
         "dateTime": "200827111111",
-        "order": 4,
-        "total": 4,
+        "serialNo": 4,
+        "fileTotal": 4,
         "reserved": 4
       }
     }
@@ -8145,8 +8049,8 @@ json1 {
 }
 hex2 7e020040d40100000000017299841738ffff000004000000080006eeb6ad02633df7013800030063200707192359642f000000400101010a0a01010a0a00640001b2070003640e200707192359000100000061646173200827111111010101652f0000004102020214000000141400c8000516150006c81c20070719235900020000000064736d200827111111020202662900000042031e012c00087a23000a2c2a200707192359000300000074706d73200827111111030303006729000000430404280190000bde31000d9038200707192359000400000000627364200827111111040404bd7e
 json2 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -8173,8 +8077,8 @@ json2 {
       "alarmId": {
         "deviceId": "adas",
         "dateTime": "200827111111",
-        "order": 1,
-        "total": 1,
+        "serialNo": 1,
+        "fileTotal": 1,
         "reserved": 1
       }
     },
@@ -8194,8 +8098,8 @@ json2 {
       "alarmId": {
         "deviceId": "dsm",
         "dateTime": "200827111111",
-        "order": 2,
-        "total": 2,
+        "serialNo": 2,
+        "fileTotal": 2,
         "reserved": 2
       }
     },
@@ -8211,8 +8115,8 @@ json2 {
       "alarmId": {
         "deviceId": "tpms",
         "dateTime": "200827111111",
-        "order": 3,
-        "total": 3,
+        "serialNo": 3,
+        "fileTotal": 3,
         "reserved": 3
       },
       "total": 0
@@ -8230,8 +8134,8 @@ json2 {
       "alarmId": {
         "deviceId": "bsd",
         "dateTime": "200827111111",
-        "order": 4,
-        "total": 4,
+        "serialNo": 4,
+        "fileTotal": 4,
         "reserved": 4
       }
     }
@@ -8247,8 +8151,8 @@ json2 {
 }
 7e000100050123456789017fff007b01c803bd7e
 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
     "messageId": 1,
@@ -8261,8 +8165,8 @@ json2 {
 }
 7e000100050123456789017fff007b01c803bd7e
 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
     "messageId": 1,
@@ -8276,8 +8180,8 @@ json2 {
 
 7e000140050100000000017299841738ffff007b01c803b57e
 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
     "messageId": 1,
@@ -8290,8 +8194,8 @@ json2 {
 }
 7e000140050100000000017299841738ffff007b01c803b57e
 {
-  "serialNo": 123,
-  "replyId": 456,
+  "responseSerialNo": 123,
+  "responseMessageId": 456,
   "resultCode": 3,
   "header": {
     "messageId": 1,
@@ -8433,7 +8337,7 @@ json2 {
 
 7e010401ff0123456789017fff00682600000001044945425200000002047068555400000003047953445900000004044a754c3300000005046d58384f00000006044666315200000007046a33795400000010106833745f79776d46584a666c6f303444000000111059333145495234534f6d317842344654000000121041353035535f7975495343706769314d00000013106c6b6332315f3850695659326573786800000014103036676268576a356632556f52364c6b000000151068714c544f3859424d326e477a79426a0000001610516575586d596535726576504d7335580000001710424872616e6d505361656a775a5a735a00000018045256425400000019046e7948370000001a106e585975494d53415a35536a47396f6f0000001b04357a674e0000001c04557533570000001d106c6c54376139574b63624e3054524346000000200453477a57000000210456366d710000002204696d43690000002310374963334c31614f6e4570644d6163430000002410455f57464658444a5a50336e6e33484e0000002510626e624461427166336d746950736f620000002610645239726a63596f355f6f326f41324800000027046676786a00000028046836506c0000002904664751510000002c045f52464a0000002d044d4330480000002e044943356a0000002f04666b657200000030046e595f6a00000031026a41000000320409302130ff7e
 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 38,
   "parameters": {
     "1": 1229275730,
@@ -8499,7 +8403,7 @@ json2 {
 }
 7e010401ff0123456789017fff00682600000001044945425200000002047068555400000003047953445900000004044a754c3300000005046d58384f00000006044666315200000007046a33795400000010106833745f79776d46584a666c6f303444000000111059333145495234534f6d317842344654000000121041353035535f7975495343706769314d00000013106c6b6332315f3850695659326573786800000014103036676268576a356632556f52364c6b000000151068714c544f3859424d326e477a79426a0000001610516575586d596535726576504d7335580000001710424872616e6d505361656a775a5a735a00000018045256425400000019046e7948370000001a106e585975494d53415a35536a47396f6f0000001b04357a674e0000001c04557533570000001d106c6c54376139574b63624e3054524346000000200453477a57000000210456366d710000002204696d43690000002310374963334c31614f6e4570644d6163430000002410455f57464658444a5a50336e6e33484e0000002510626e624461427166336d746950736f620000002610645239726a63596f355f6f326f41324800000027046676786a00000028046836506c0000002904664751510000002c045f52464a0000002d044d4330480000002e044943356a0000002f04666b657200000030046e595f6a00000031026a41000000320409302130ff7e
 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 38,
   "parameters": {
     "1": 1229275730,
@@ -8566,7 +8470,7 @@ json2 {
 
 7e010441ff0100000000017299841738ffff00682600000001044b68767300000002046e764e65000000030449716b57000000040452704a360000000504524d6d5200000006043535774e00000007044743525a000000101058676767375a3558584b44376e625661000000111035625067564c37537a4c616672774e36000000121048684e7669576777494d6e493555624d000000131064527432655967746479316a464857450000001410676554657949565f7a537362694a6e540000001510556f6868585171533565773575385562000000161068336d7550796a6e584d387933587173000000171075397a57597452444c4863614e6a527800000018044e586a4f000000190438646c690000001a104e30775635786d4a664d6f63386166500000001b04626c36760000001c04383665370000001d104f344c42704b737445687a4f4c5646350000002004386c525500000021045041666e000000220457456b3900000023106138334c43765737546d5051736e31520000002410427559785f4937584e694f63364e4d490000002510653756707a595579763576596433346c0000002610544e376c476643386a4b4d496e4c396700000027045057586e0000002804674c636c0000002904474f6a640000002c04454931570000002d04634e507a0000002e04534454420000002f04525f647a00000030045a4a683000000031026c64000000320409302130a47e
 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 38,
   "parameters": {
     "1": 1265137267,
@@ -8632,7 +8536,7 @@ json2 {
 }
 7e010441ff0100000000017299841738ffff00682600000001044b68767300000002046e764e65000000030449716b57000000040452704a360000000504524d6d5200000006043535774e00000007044743525a000000101058676767375a3558584b44376e625661000000111035625067564c37537a4c616672774e36000000121048684e7669576777494d6e493555624d000000131064527432655967746479316a464857450000001410676554657949565f7a537362694a6e540000001510556f6868585171533565773575385562000000161068336d7550796a6e584d387933587173000000171075397a57597452444c4863614e6a527800000018044e586a4f000000190438646c690000001a104e30775635786d4a664d6f63386166500000001b04626c36760000001c04383665370000001d104f344c42704b737445687a4f4c5646350000002004386c525500000021045041666e000000220457456b3900000023106138334c43765737546d5051736e31520000002410427559785f4937584e694f63364e4d490000002510653756707a595579763576596433346c0000002610544e376c476643386a4b4d496e4c396700000027045057586e0000002804674c636c0000002904474f6a640000002c04454931570000002d04634e507a0000002e04534454420000002f04525f647a00000030045a4a683000000031026c64000000320409302130a47e
 {
-  "serialNo": 104,
+  "responseSerialNo": 104,
   "total": 38,
   "parameters": {
     "1": 1265137267,
@@ -8835,8 +8739,8 @@ json2 {
 
 7e0200007c0123456789017fff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e3737370000000000000000000000000000000000000000000000000000001105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e3101286b7e
 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -8913,8 +8817,8 @@ json2 {
 }
 7e0200007c0123456789017fff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e3737370000000000000000000000000000000000000000000000000000001105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e3101286b7e
 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -8992,8 +8896,8 @@ json2 {
 
 7e0200407c0100000000017299841738ffff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e3737370000000000000000000000000000000000000000000000000000001105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e310128637e
 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -9070,8 +8974,8 @@ json2 {
 }
 7e0200407c0100000000017299841738ffff000004000000080006eeb6ad02633df701380003006320070719235901040000000b02020016030200210402002c051e3737370000000000000000000000000000000000000000000000000000001105420000004212064d0000004d4d1307000000580058582504000000632a02000a2b040000001430011e310128637e
 {
-  "warningMark": 1024,
-  "status": 2048,
+  "warnBit": 1024,
+  "statusBit": 2048,
   "latitude": 116307629,
   "longitude": 40058359,
   "altitude": 312,
@@ -9199,7 +9103,7 @@ json2 {
 
 7e030200030123456789017fffef447fde7e
 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -9212,7 +9116,7 @@ json2 {
 }
 7e030200030123456789017fffef447fde7e
 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -9226,7 +9130,7 @@ json2 {
 
 7e030240030100000000017299841738ffffef447fd67e
 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -9239,7 +9143,7 @@ json2 {
 }
 7e030240030100000000017299841738ffffef447fd67e
 {
-  "serialNo": 61252,
+  "responseSerialNo": 61252,
   "answerId": 127,
   "header": {
     "messageId": 770,
@@ -9386,8 +9290,8 @@ json2 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9398,8 +9302,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9410,8 +9314,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9437,8 +9341,8 @@ json2 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9449,8 +9353,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9461,8 +9365,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9489,8 +9393,8 @@ json2 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9501,8 +9405,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9513,8 +9417,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9540,8 +9444,8 @@ json2 {
   "items": [
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9552,8 +9456,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9564,8 +9468,8 @@ json2 {
     },
     {
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -9937,8 +9841,8 @@ json2 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -9970,8 +9874,8 @@ json2 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -10004,8 +9908,8 @@ json2 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -10037,8 +9941,8 @@ json2 {
   "event": 1,
   "channelId": 2,
   "position": {
-    "warningMark": 1024,
-    "status": 2048,
+    "warnBit": 1024,
+    "statusBit": 2048,
     "latitude": 116307629,
     "longitude": 40058359,
     "altitude": 312,
@@ -10065,7 +9969,7 @@ json2 {
 
 7e080200900123456789017fff007b000400000001010101000004000000080006eeb6ad02633df701380003006320070719235900000002010101000004000000080006eeb6ad02633df701380003006320070719235900000003010101000004000000080006eeb6ad02633df701380003006320070719235900000004010101000004000000080006eeb6ad02633df7013800030063200707192359e97e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -10074,8 +9978,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10090,8 +9994,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10106,8 +10010,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10122,8 +10026,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10144,7 +10048,7 @@ json2 {
 }
 7e080200900123456789017fff007b000400000001010101000004000000080006eeb6ad02633df701380003006320070719235900000002010101000004000000080006eeb6ad02633df701380003006320070719235900000003010101000004000000080006eeb6ad02633df701380003006320070719235900000004010101000004000000080006eeb6ad02633df7013800030063200707192359e97e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -10153,8 +10057,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10169,8 +10073,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10185,8 +10089,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10201,8 +10105,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10224,7 +10128,7 @@ json2 {
 
 7e080240900100000000017299841738ffff007b000400000001010101000004000000080006eeb6ad02633df701380003006320070719235900000002010101000004000000080006eeb6ad02633df701380003006320070719235900000003010101000004000000080006eeb6ad02633df701380003006320070719235900000004010101000004000000080006eeb6ad02633df7013800030063200707192359e17e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -10233,8 +10137,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10249,8 +10153,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10265,8 +10169,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10281,8 +10185,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10303,7 +10207,7 @@ json2 {
 }
 7e080240900100000000017299841738ffff007b000400000001010101000004000000080006eeb6ad02633df701380003006320070719235900000002010101000004000000080006eeb6ad02633df701380003006320070719235900000003010101000004000000080006eeb6ad02633df701380003006320070719235900000004010101000004000000080006eeb6ad02633df7013800030063200707192359e17e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "total": 4,
   "items": [
     {
@@ -10312,8 +10216,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10328,8 +10232,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10344,8 +10248,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10360,8 +10264,8 @@ json2 {
       "channelId": 1,
       "event": 1,
       "position": {
-        "warningMark": 1024,
-        "status": 2048,
+        "warnBit": 1024,
+        "statusBit": 2048,
         "latitude": 116307629,
         "longitude": 40058359,
         "altitude": 312,
@@ -10383,7 +10287,7 @@ json2 {
 
 7e080500290123456789017ffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009107e
 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -10408,7 +10312,7 @@ json2 {
 }
 7e080500290123456789017ffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009107e
 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -10434,7 +10338,7 @@ json2 {
 
 7e080540290100000000017299841738fffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009187e
 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -10459,7 +10363,7 @@ json2 {
 }
 7e080540290100000000017299841738fffff4c0000009000000010000000200000003000000040000000500000006000000070000000800000009187e
 {
-  "serialNo": 62656,
+  "responseSerialNo": 62656,
   "result": 0,
   "total": 9,
   "items": [
@@ -10579,7 +10483,7 @@ json2 {
 
 7e8003000c0123456789017fff109909010203040506070809067e
 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -10603,7 +10507,7 @@ json2 {
 }
 7e8003000c0123456789017fff109909010203040506070809067e
 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -10628,7 +10532,7 @@ json2 {
 
 7e8003400c0100000000017299841738ffff1099090102030405060708090e7e
 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -10652,7 +10556,7 @@ json2 {
 }
 7e8003400c0100000000017299841738ffff1099090102030405060708090e7e
 {
-  "serialNo": 4249,
+  "responseSerialNo": 4249,
   "total": 9,
   "items": [
     1,
@@ -10677,7 +10581,7 @@ json2 {
 
 7e8100001e0123456789017fff970c00636877443053453166636877443053453166636877443053453166457e
 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -10691,7 +10595,7 @@ json2 {
 }
 7e8100001e0123456789017fff970c00636877443053453166636877443053453166636877443053453166457e
 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -10706,7 +10610,7 @@ json2 {
 
 7e8100401e0100000000017299841738ffff970c006368774430534531666368774430534531666368774430534531664d7e
 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -10720,7 +10624,7 @@ json2 {
 }
 7e8100401e0100000000017299841738ffff970c006368774430534531666368774430534531666368774430534531664d7e
 {
-  "serialNo": 38668,
+  "responseSerialNo": 38668,
   "resultCode": 0,
   "token": "chwD0SE1fchwD0SE1fchwD0SE1f",
   "header": {
@@ -11289,7 +11193,7 @@ json2 {
 
 7e820300060123456789017fff007b00009d5e377e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -11302,7 +11206,7 @@ json2 {
 }
 7e820300060123456789017fff007b00009d5e377e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -11316,7 +11220,7 @@ json2 {
 
 7e820340060100000000017299841738ffff007b00009d5e3f7e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -11329,7 +11233,7 @@ json2 {
 }
 7e820340060100000000017299841738ffff007b00009d5e3f7e
 {
-  "serialNo": 123,
+  "responseSerialNo": 123,
   "type": 40286,
   "header": {
     "messageId": 33283,
@@ -13675,9 +13579,9 @@ json2 {
 
 7e020100240123456789017fff686200002a5a000074280000a3e50000db4fbc732711012c200512121259010400313233547e
 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -13698,9 +13602,9 @@ json2 {
 }
 7e020100240123456789017fff686200002a5a000074280000a3e50000db4fbc732711012c200512121259010400313233547e
 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -13722,9 +13626,9 @@ json2 {
 
 7e020140240100000000017299841738ffff686200002a5a000074280000a3e50000db4fbc732711012c2005121212590104003132335c7e
 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -13745,9 +13649,9 @@ json2 {
 }
 7e020140240100000000017299841738ffff686200002a5a000074280000a3e50000db4fbc732711012c2005121212590104003132335c7e
 {
-  "serialNo": 26722,
-  "warningMark": 10842,
-  "status": 29736,
+  "responseSerialNo": 26722,
+  "warnBit": 10842,
+  "statusBit": 29736,
   "latitude": 41957,
   "longitude": 56143,
   "altitude": 48243,
@@ -14338,7 +14242,7 @@ json2 {
 }
 
 7e0900000f0123456789017fff006173647a786371776531323333354c7e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[33]未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14368,9 +14272,9 @@ json2 {
     "verified": true
   }
 }
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[44]未注册的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[49]未注册的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 7e0900000f0123456789017fff006173647a786371776531323333354c7e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[33]未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14402,7 +14306,7 @@ json2 {
 }
 
 7e0900400f0100000000017299841738ffff006173647a78637177653132333335447e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[33]未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14432,9 +14336,9 @@ json2 {
     "verified": true
   }
 }
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[44]未注册的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[49]未注册的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 7e0900400f0100000000017299841738ffff006173647a78637177653132333335447e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[33]未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14484,20 +14388,14 @@ json2 {
 [main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=17, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, }]
 [main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=18, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}]
 {
-  "serialNo": 2,
+  "responseSerialNo": 2,
   "count": 180,
   "items": [
     {
       "channelNo": 1,
       "startTime": "2020-07-17T00:00:00",
       "endTime": "2020-07-17T00:00:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -14510,13 +14408,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T00:00:00",
       "endTime": "2020-07-17T00:00:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -14529,13 +14421,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T00:00:00",
       "endTime": "2020-07-17T00:00:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -14548,13 +14434,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T00:00:00",
       "endTime": "2020-07-17T00:00:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -14567,13 +14447,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T00:00:00",
       "endTime": "2020-07-17T00:00:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -14586,13 +14460,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T00:00:35",
       "endTime": "2020-07-17T00:07:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14605,13 +14473,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T00:00:35",
       "endTime": "2020-07-17T00:07:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14624,13 +14486,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T00:00:35",
       "endTime": "2020-07-17T00:07:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14643,13 +14499,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T00:00:35",
       "endTime": "2020-07-17T00:07:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14662,13 +14512,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T00:00:35",
       "endTime": "2020-07-17T00:07:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14681,13 +14525,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T00:07:24",
       "endTime": "2020-07-17T00:26:23",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14700,13 +14538,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T00:07:24",
       "endTime": "2020-07-17T00:26:23",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14719,13 +14551,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T00:07:24",
       "endTime": "2020-07-17T00:26:23",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14738,13 +14564,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T00:07:24",
       "endTime": "2020-07-17T00:26:23",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14757,13 +14577,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T00:07:24",
       "endTime": "2020-07-17T00:26:23",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14776,13 +14590,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T00:26:23",
       "endTime": "2020-07-17T00:45:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14795,13 +14603,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T00:26:23",
       "endTime": "2020-07-17T00:45:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14814,13 +14616,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T00:26:23",
       "endTime": "2020-07-17T00:45:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14833,13 +14629,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T00:26:23",
       "endTime": "2020-07-17T00:45:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14852,13 +14642,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T00:26:23",
       "endTime": "2020-07-17T00:45:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14871,13 +14655,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T00:45:20",
       "endTime": "2020-07-17T01:04:17",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14890,13 +14668,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T00:45:20",
       "endTime": "2020-07-17T01:04:17",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14909,13 +14681,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T00:45:20",
       "endTime": "2020-07-17T01:04:17",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14928,13 +14694,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T00:45:20",
       "endTime": "2020-07-17T01:04:17",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14947,13 +14707,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T00:45:20",
       "endTime": "2020-07-17T01:04:17",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14966,13 +14720,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T01:04:17",
       "endTime": "2020-07-17T01:23:11",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -14985,13 +14733,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T01:04:17",
       "endTime": "2020-07-17T01:23:11",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15004,13 +14746,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T01:04:17",
       "endTime": "2020-07-17T01:23:11",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15023,13 +14759,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T01:04:17",
       "endTime": "2020-07-17T01:23:11",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15042,13 +14772,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T01:04:17",
       "endTime": "2020-07-17T01:23:11",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15061,13 +14785,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T01:23:11",
       "endTime": "2020-07-17T01:30:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15080,13 +14798,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T01:23:11",
       "endTime": "2020-07-17T01:30:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15099,13 +14811,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T01:23:11",
       "endTime": "2020-07-17T01:30:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15118,13 +14824,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T01:23:11",
       "endTime": "2020-07-17T01:30:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15137,13 +14837,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T01:23:11",
       "endTime": "2020-07-17T01:30:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15156,13 +14850,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T01:30:24",
       "endTime": "2020-07-17T01:35:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15175,13 +14863,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T01:30:24",
       "endTime": "2020-07-17T01:35:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15194,13 +14876,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T01:30:24",
       "endTime": "2020-07-17T01:35:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15213,13 +14889,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T01:30:24",
       "endTime": "2020-07-17T01:35:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15232,13 +14902,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T01:30:24",
       "endTime": "2020-07-17T01:35:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15251,13 +14915,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T01:35:06",
       "endTime": "2020-07-17T01:35:19",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15270,13 +14928,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T01:35:06",
       "endTime": "2020-07-17T01:35:19",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15289,13 +14941,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T01:35:06",
       "endTime": "2020-07-17T01:35:19",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15308,13 +14954,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T01:35:06",
       "endTime": "2020-07-17T01:35:19",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15327,13 +14967,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T01:35:06",
       "endTime": "2020-07-17T01:35:19",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15346,13 +14980,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T06:44:39",
       "endTime": "2020-07-17T06:44:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15365,13 +14993,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T06:44:39",
       "endTime": "2020-07-17T06:44:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15384,13 +15006,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T06:44:39",
       "endTime": "2020-07-17T06:44:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15403,13 +15019,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T06:44:39",
       "endTime": "2020-07-17T06:44:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15422,13 +15032,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T06:44:39",
       "endTime": "2020-07-17T06:44:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         0
       ],
@@ -15441,13 +15045,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T06:44:46",
       "endTime": "2020-07-17T06:58:02",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15460,13 +15058,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T06:44:46",
       "endTime": "2020-07-17T06:58:02",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15479,13 +15071,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T06:44:46",
       "endTime": "2020-07-17T06:58:02",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15498,13 +15084,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T06:44:46",
       "endTime": "2020-07-17T06:58:02",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15517,13 +15097,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T06:44:46",
       "endTime": "2020-07-17T06:58:02",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15536,13 +15110,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T06:58:02",
       "endTime": "2020-07-17T07:16:52",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15555,13 +15123,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T06:58:02",
       "endTime": "2020-07-17T07:16:52",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15574,13 +15136,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T06:58:02",
       "endTime": "2020-07-17T07:16:52",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15593,13 +15149,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T06:58:02",
       "endTime": "2020-07-17T07:16:52",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15612,13 +15162,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T06:58:02",
       "endTime": "2020-07-17T07:16:52",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15631,13 +15175,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T07:16:52",
       "endTime": "2020-07-17T07:35:43",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15650,13 +15188,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T07:16:52",
       "endTime": "2020-07-17T07:35:43",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15669,13 +15201,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T07:16:52",
       "endTime": "2020-07-17T07:35:43",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15688,13 +15214,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T07:16:52",
       "endTime": "2020-07-17T07:35:43",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15707,13 +15227,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T07:16:52",
       "endTime": "2020-07-17T07:35:43",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15726,13 +15240,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T07:35:44",
       "endTime": "2020-07-17T07:54:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15745,13 +15253,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T07:35:44",
       "endTime": "2020-07-17T07:54:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15764,13 +15266,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T07:35:44",
       "endTime": "2020-07-17T07:54:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15783,13 +15279,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T07:35:44",
       "endTime": "2020-07-17T07:54:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15802,13 +15292,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T07:35:44",
       "endTime": "2020-07-17T07:54:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15821,13 +15305,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T07:54:35",
       "endTime": "2020-07-17T08:13:26",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15840,13 +15318,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T07:54:35",
       "endTime": "2020-07-17T08:13:26",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15859,13 +15331,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T07:54:35",
       "endTime": "2020-07-17T08:13:26",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15878,13 +15344,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T07:54:35",
       "endTime": "2020-07-17T08:13:26",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15897,13 +15357,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T07:54:35",
       "endTime": "2020-07-17T08:13:26",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15916,13 +15370,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T08:13:26",
       "endTime": "2020-07-17T08:32:16",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15935,13 +15383,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T08:13:26",
       "endTime": "2020-07-17T08:32:16",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15954,13 +15396,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T08:13:26",
       "endTime": "2020-07-17T08:32:16",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15973,13 +15409,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T08:13:26",
       "endTime": "2020-07-17T08:32:16",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -15992,13 +15422,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T08:13:26",
       "endTime": "2020-07-17T08:32:16",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16011,13 +15435,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T08:32:16",
       "endTime": "2020-07-17T08:51:08",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16030,13 +15448,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T08:32:16",
       "endTime": "2020-07-17T08:51:07",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16049,13 +15461,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T08:32:16",
       "endTime": "2020-07-17T08:51:08",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16068,13 +15474,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T08:32:16",
       "endTime": "2020-07-17T08:51:08",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16087,13 +15487,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T08:32:16",
       "endTime": "2020-07-17T08:51:08",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16106,13 +15500,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T08:51:08",
       "endTime": "2020-07-17T09:09:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16125,13 +15513,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T08:51:08",
       "endTime": "2020-07-17T09:09:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16144,13 +15526,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T08:51:08",
       "endTime": "2020-07-17T09:09:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16163,13 +15539,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T08:51:08",
       "endTime": "2020-07-17T09:09:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16182,13 +15552,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T08:51:08",
       "endTime": "2020-07-17T09:09:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16201,13 +15565,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T09:09:57",
       "endTime": "2020-07-17T09:28:49",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16220,13 +15578,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T09:09:57",
       "endTime": "2020-07-17T09:28:49",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16239,13 +15591,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T09:09:57",
       "endTime": "2020-07-17T09:28:49",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16258,13 +15604,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T09:09:57",
       "endTime": "2020-07-17T09:28:49",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16277,13 +15617,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T09:09:57",
       "endTime": "2020-07-17T09:28:49",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16296,13 +15630,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T09:28:49",
       "endTime": "2020-07-17T09:47:39",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16315,13 +15643,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T09:28:49",
       "endTime": "2020-07-17T09:47:39",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16334,13 +15656,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T09:28:49",
       "endTime": "2020-07-17T09:47:39",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16353,13 +15669,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T09:28:49",
       "endTime": "2020-07-17T09:47:39",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16372,13 +15682,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T09:28:50",
       "endTime": "2020-07-17T09:47:39",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16391,13 +15695,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T09:47:39",
       "endTime": "2020-07-17T10:06:27",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16410,13 +15708,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T09:47:39",
       "endTime": "2020-07-17T10:06:27",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16429,13 +15721,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T09:47:39",
       "endTime": "2020-07-17T10:06:27",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16448,13 +15734,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T09:47:39",
       "endTime": "2020-07-17T10:06:27",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16467,13 +15747,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T09:47:39",
       "endTime": "2020-07-17T10:06:27",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16486,13 +15760,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T10:06:27",
       "endTime": "2020-07-17T10:25:18",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16505,13 +15773,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T10:06:27",
       "endTime": "2020-07-17T10:25:18",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16524,13 +15786,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T10:06:27",
       "endTime": "2020-07-17T10:25:18",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16543,13 +15799,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T10:06:27",
       "endTime": "2020-07-17T10:25:18",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16562,13 +15812,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T10:06:27",
       "endTime": "2020-07-17T10:25:18",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16581,13 +15825,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T10:25:18",
       "endTime": "2020-07-17T10:44:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16600,13 +15838,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T10:25:18",
       "endTime": "2020-07-17T10:44:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16619,13 +15851,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T10:25:18",
       "endTime": "2020-07-17T10:44:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16638,13 +15864,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T10:25:18",
       "endTime": "2020-07-17T10:44:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16657,13 +15877,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T10:25:18",
       "endTime": "2020-07-17T10:44:06",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16676,13 +15890,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T10:44:06",
       "endTime": "2020-07-17T11:02:51",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16695,13 +15903,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T10:44:06",
       "endTime": "2020-07-17T11:02:51",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16714,13 +15916,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T10:44:06",
       "endTime": "2020-07-17T11:02:51",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16733,13 +15929,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T10:44:06",
       "endTime": "2020-07-17T11:02:51",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16752,13 +15942,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T10:44:06",
       "endTime": "2020-07-17T11:02:51",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16771,13 +15955,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T11:02:51",
       "endTime": "2020-07-17T11:21:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16790,13 +15968,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T11:02:51",
       "endTime": "2020-07-17T11:21:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16809,13 +15981,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T11:02:51",
       "endTime": "2020-07-17T11:21:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16828,13 +15994,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T11:02:51",
       "endTime": "2020-07-17T11:21:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16847,13 +16007,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T11:02:51",
       "endTime": "2020-07-17T11:21:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16866,13 +16020,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T11:21:46",
       "endTime": "2020-07-17T11:40:42",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16885,13 +16033,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T11:21:46",
       "endTime": "2020-07-17T11:40:42",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16904,13 +16046,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T11:21:46",
       "endTime": "2020-07-17T11:40:42",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16923,13 +16059,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T11:21:46",
       "endTime": "2020-07-17T11:40:42",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16942,13 +16072,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T11:21:46",
       "endTime": "2020-07-17T11:40:42",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16961,13 +16085,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T11:40:42",
       "endTime": "2020-07-17T11:59:32",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16980,13 +16098,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T11:40:42",
       "endTime": "2020-07-17T11:59:32",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -16999,13 +16111,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T11:40:42",
       "endTime": "2020-07-17T11:59:32",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17018,13 +16124,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T11:40:42",
       "endTime": "2020-07-17T11:59:32",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17037,13 +16137,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T11:40:42",
       "endTime": "2020-07-17T11:59:32",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17056,13 +16150,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T11:59:32",
       "endTime": "2020-07-17T12:18:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17075,13 +16163,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T11:59:32",
       "endTime": "2020-07-17T12:18:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17094,13 +16176,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T11:59:32",
       "endTime": "2020-07-17T12:18:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17113,13 +16189,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T11:59:32",
       "endTime": "2020-07-17T12:18:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17132,13 +16202,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T11:59:32",
       "endTime": "2020-07-17T12:18:24",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17151,13 +16215,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T12:18:24",
       "endTime": "2020-07-17T12:37:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17170,13 +16228,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T12:18:24",
       "endTime": "2020-07-17T12:37:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17189,13 +16241,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T12:18:24",
       "endTime": "2020-07-17T12:37:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17208,13 +16254,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T12:18:24",
       "endTime": "2020-07-17T12:37:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17227,13 +16267,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T12:18:24",
       "endTime": "2020-07-17T12:37:20",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17246,13 +16280,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T12:37:20",
       "endTime": "2020-07-17T12:56:12",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17265,13 +16293,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T12:37:20",
       "endTime": "2020-07-17T12:56:12",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17284,13 +16306,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T12:37:20",
       "endTime": "2020-07-17T12:56:12",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17303,13 +16319,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T12:37:20",
       "endTime": "2020-07-17T12:56:12",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17322,13 +16332,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T12:37:20",
       "endTime": "2020-07-17T12:56:12",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17341,13 +16345,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T12:56:12",
       "endTime": "2020-07-17T13:15:01",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17360,13 +16358,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T12:56:12",
       "endTime": "2020-07-17T13:15:01",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17379,13 +16371,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T12:56:13",
       "endTime": "2020-07-17T13:15:01",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17398,13 +16384,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T12:56:12",
       "endTime": "2020-07-17T13:15:01",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17417,13 +16397,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T12:56:12",
       "endTime": "2020-07-17T13:15:01",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17436,13 +16410,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T13:15:01",
       "endTime": "2020-07-17T13:33:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17455,13 +16423,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T13:15:01",
       "endTime": "2020-07-17T13:33:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17474,13 +16436,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T13:15:01",
       "endTime": "2020-07-17T13:33:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17493,13 +16449,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T13:15:01",
       "endTime": "2020-07-17T13:33:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17512,13 +16462,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T13:15:01",
       "endTime": "2020-07-17T13:33:57",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17531,13 +16475,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T13:33:57",
       "endTime": "2020-07-17T13:52:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17550,13 +16488,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T13:33:57",
       "endTime": "2020-07-17T13:52:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17569,13 +16501,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T13:33:57",
       "endTime": "2020-07-17T13:52:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17588,13 +16514,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T13:33:57",
       "endTime": "2020-07-17T13:52:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17607,13 +16527,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T13:33:57",
       "endTime": "2020-07-17T13:52:46",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17626,13 +16540,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T13:52:46",
       "endTime": "2020-07-17T14:11:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17645,13 +16553,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T13:52:46",
       "endTime": "2020-07-17T14:11:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17664,13 +16566,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T13:52:46",
       "endTime": "2020-07-17T14:11:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17683,13 +16579,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T13:52:46",
       "endTime": "2020-07-17T14:11:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17702,13 +16592,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T13:52:46",
       "endTime": "2020-07-17T14:11:35",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17721,13 +16605,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T14:11:35",
       "endTime": "2020-07-17T14:30:25",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17740,13 +16618,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T14:11:35",
       "endTime": "2020-07-17T14:30:25",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17759,13 +16631,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T14:11:35",
       "endTime": "2020-07-17T14:30:25",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17778,13 +16644,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T14:11:35",
       "endTime": "2020-07-17T14:30:25",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17797,13 +16657,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T14:11:35",
       "endTime": "2020-07-17T14:30:25",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17816,13 +16670,7 @@ json2 {
       "channelNo": 1,
       "startTime": "2020-07-17T14:30:25",
       "endTime": "2020-07-17T14:49:15",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17835,13 +16683,7 @@ json2 {
       "channelNo": 2,
       "startTime": "2020-07-17T14:30:25",
       "endTime": "2020-07-17T14:49:15",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17854,13 +16696,7 @@ json2 {
       "channelNo": 3,
       "startTime": "2020-07-17T14:30:25",
       "endTime": "2020-07-17T14:49:15",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17873,13 +16709,7 @@ json2 {
       "channelNo": 4,
       "startTime": "2020-07-17T14:30:25",
       "endTime": "2020-07-17T14:49:15",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17892,13 +16722,7 @@ json2 {
       "channelNo": 5,
       "startTime": "2020-07-17T14:30:25",
       "endTime": "2020-07-17T14:49:15",
-      "warningMark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "warnBit": [
         0,
         1
       ],
@@ -17921,10 +16745,10 @@ json2 {
 }
 [main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=13224005528, messageId=104, total=2, count=1, retryCount=0, time=0, packets={1, }]
 [main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=13224005528, messageId=104, total=2, count=2, retryCount=0, time=0, packets={1,2}]
-[main] WARN org.yzh.protocol.commons.transform.ParameterConverter[26]未识别的终端参数项：ID[2063597568], HEX[0000]
-[main] WARN org.yzh.protocol.commons.transform.ParameterConverter[26]未识别的终端参数项：ID[2080374784], HEX[0000000000000000000000000000000000000000]
+[main] WARN org.yzh.protocol.commons.transform.ParameterConverter[31]未识别的终端参数项:ID[dec:2063597568,hex:7b000000], VALUE[0000]
+[main] WARN org.yzh.protocol.commons.transform.ParameterConverter[31]未识别的终端参数项:ID[dec:2080374784,hex:7c000000], VALUE[0000000000000000000000000000000000000000]
 {
-  "serialNo": 420,
+  "responseSerialNo": 420,
   "total": 88,
   "parameters": {
     "1": 10,

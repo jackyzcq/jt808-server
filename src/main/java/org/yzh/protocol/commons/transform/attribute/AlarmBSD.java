@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 /**
  * 盲点监测
  */
-public class AlarmBSD {
+public class AlarmBSD implements Alarm {
 
     public static final int id = 0x67;
 
@@ -28,6 +28,11 @@ public class AlarmBSD {
     private int status;
     private AlarmId alarmId;
 
+    @Override
+    public int getLevel() {
+        return 0;
+    }
+
     @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
     public long getSerialNo() {
         return serialNo;
@@ -37,7 +42,8 @@ public class AlarmBSD {
         this.serialNo = serialNo;
     }
 
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态")
+    /** 该字段仅适用于有开始和结束标志类型的报警或事件,报警类型或事件类型无开始和结束标志,则该位不可用,填入0x00即可 */
+    @Field(index = 4, type = DataType.BYTE, desc = "标志状态: 0.不可用 1.开始标志 2.结束标志")
     public int getState() {
         return state;
     }
@@ -46,7 +52,10 @@ public class AlarmBSD {
         this.state = state;
     }
 
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型")
+    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型:\n" +
+            "0x01:后方接近报警\n" +
+            "0x02:左侧后方接近报警\n" +
+            "0x03:右侧后方接近报警")
     public int getType() {
         return type;
     }
@@ -116,5 +125,22 @@ public class AlarmBSD {
 
     public void setAlarmId(AlarmId alarmId) {
         this.alarmId = alarmId;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("AlarmBSD{");
+        sb.append("serialNo=").append(serialNo);
+        sb.append(", state=").append(state);
+        sb.append(", type=").append(type);
+        sb.append(", speed=").append(speed);
+        sb.append(", altitude=").append(altitude);
+        sb.append(", latitude=").append(latitude);
+        sb.append(", longitude=").append(longitude);
+        sb.append(", dateTime=").append(dateTime);
+        sb.append(", status=").append(status);
+        sb.append(", alarmId=").append(alarmId);
+        sb.append('}');
+        return sb.toString();
     }
 }
