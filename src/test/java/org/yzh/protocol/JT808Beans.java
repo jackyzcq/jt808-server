@@ -4,6 +4,7 @@ import org.yzh.protocol.basics.Header;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.basics.KeyValuePair;
 import org.yzh.protocol.commons.Action;
+import org.yzh.protocol.commons.Shape;
 import org.yzh.protocol.commons.ShapeAction;
 import org.yzh.protocol.commons.transform.AttributeId;
 import org.yzh.protocol.commons.transform.attribute.*;
@@ -391,7 +392,7 @@ public class JT808Beans {
         T0805 bean = new T0805();
         bean.setResponseSerialNo(62656);
         bean.setResult(0);
-        bean.setItems(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        bean.setId(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         return bean;
     }
 
@@ -406,7 +407,7 @@ public class JT808Beans {
     public static T8003 T8003() {
         T8003 bean = new T8003();
         bean.setResponseSerialNo(4249);
-        bean.setItems(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        bean.setId(new short[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         return bean;
     }
 
@@ -436,8 +437,7 @@ public class JT808Beans {
 
     //查询指定终端参数
     public static T8106 T8106() {
-        T8106 bean = new T8106();
-        bean.setId(new byte[]{1, 3, 5, 7, 9, 127});
+        T8106 bean = new T8106(1, 3, 5, 7, 9, 127);
         return bean;
     }
 
@@ -556,13 +556,9 @@ public class JT808Beans {
         return bean;
     }
 
-    //删除圆形区域|删除矩形区域|删除多边形区域
+    //删除圆形区域|删除矩形区域|删除多边形区域|删除路线
     public static T8601 T8601() {
-        T8601 bean = new T8601();
-        bean.addItem(1);
-        bean.addItem(2);
-        bean.addItem(3);
-        bean.addItem(65535);
+        T8601 bean = new T8601(1, 2, 3, 65535);
         return bean;
     }
 
@@ -615,11 +611,19 @@ public class JT808Beans {
         return bean;
     }
 
+    //查询区域或线路数据
+    public static T8608 T8608() {
+        T8608 bean = new T8608();
+        bean.setTotal(Shape.Route);
+        bean.setId(new int[]{2, 4, 6, 8, 999999999});
+        return bean;
+    }
+
     //多媒体数据上传应答
     public static T8800 T8800() {
         T8800 bean = new T8800();
         bean.setMediaId(49503);
-        bean.setItems(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        bean.setId(new short[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         return bean;
     }
 
