@@ -9,6 +9,7 @@ import org.yzh.protocol.t808.T0102;
 import org.yzh.web.commons.EncryptUtils;
 import org.yzh.web.mapper.DeviceMapper;
 import org.yzh.web.model.entity.DeviceDO;
+import org.yzh.web.model.enums.SessionKey;
 import org.yzh.web.model.vo.DeviceInfo;
 import org.yzh.web.service.DeviceService;
 
@@ -35,7 +36,7 @@ public class DeviceServiceImpl implements DeviceService {
 
         DeviceDO record = new DeviceDO();
         record.setDeviceId(deviceId);
-        record.setMobileNo(request.getHeader().getMobileNo());
+        record.setMobileNo(request.getClientId());
         record.setPlateNo(request.getPlateNo());
         record.setOnline(true);
         record.setBind(true);
@@ -48,9 +49,9 @@ public class DeviceServiceImpl implements DeviceService {
         if (deviceDO == null || deviceDO.getInstallTime() == null)
             record.setInstallTime(now);
 
-        Integer protocolVersion = request.getSession().getProtocolVersion();
+        Integer protocolVersion = (Integer) request.getSession().getAttribute(SessionKey.ProtocolVersion);
         if (protocolVersion == null)
-            protocolVersion = request.getHeader().getVersionNo();
+            protocolVersion = request.getVersionNo();
         record.setProtocolVersion(protocolVersion);
 
         int row = deviceMapper.update(record);

@@ -1,7 +1,10 @@
 package org.yzh.protocol.basics;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.github.yezhihao.netmc.core.model.Message;
 import io.github.yezhihao.netmc.session.Session;
+import io.github.yezhihao.protostar.DataType;
+import io.github.yezhihao.protostar.annotation.Field;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.yzh.protocol.commons.MessageId;
@@ -12,47 +15,115 @@ import java.beans.Transient;
  * @author yezhihao
  * @home https://gitee.com/yezhihao/jt808-server
  */
+@JsonIgnoreProperties({"messageId", "properties", "versionNo", "clientId", "serialNo", "packageTotal", "packageNo", "verified", "bodyLength", "encryption", "subpackage", "version", "reserved"})
 public class JTMessage implements Message {
+
+    @Field(index = 0, type = DataType.WORD, desc = "消息ID")
+    protected int messageId;
+    @Field(index = 2, type = DataType.WORD, desc = "消息体属性")
+    protected int properties;
+    @Field(index = 4, type = DataType.BYTE, desc = "协议版本号", version = 1)
+    protected int versionNo;
+    @Field(index = 4, type = DataType.BCD8421, length = 6, desc = "终端手机号", version = {-1, 0})
+    @Field(index = 5, type = DataType.BCD8421, length = 10, desc = "终端手机号", version = 1)
+    protected String clientId;
+    @Field(index = 10, type = DataType.WORD, desc = "流水号", version = {-1, 0})
+    @Field(index = 15, type = DataType.WORD, desc = "流水号", version = 1)
+    protected int serialNo;
+    @Field(index = 12, type = DataType.WORD, desc = "消息包总数", version = 0)
+    @Field(index = 17, type = DataType.WORD, desc = "消息包总数", version = 1)
+    protected Integer packageTotal;
+    @Field(index = 14, type = DataType.WORD, desc = "包序号", version = 0)
+    @Field(index = 19, type = DataType.WORD, desc = "包序号", version = 1)
+    protected Integer packageNo;
+    /** bcc校验 */
+    private boolean verified = true;
 
     private transient Session session;
 
     private transient byte[] payload;
 
-    protected Header header;
 
     public JTMessage() {
     }
 
-    public JTMessage(String mobileNo, int messageId) {
-        this.header = new Header(mobileNo, messageId);
+    public JTMessage(int messageId) {
+        this.messageId = messageId;
     }
 
-    public void setHeader(Header header) {
-        this.header = header;
+    public JTMessage copyBy(JTMessage that) {
+        this.setClientId(that.getClientId());
+        this.setVersionNo(that.getVersionNo());
+        this.setVersion(that.isVersion());
+        return this;
     }
 
-    public Header getHeader() {
-        return header;
+    public int getMessageId() {
+        return messageId;
     }
 
-    @Override
+    public void setMessageId(int messageId) {
+        this.messageId = messageId;
+    }
+
+    public int getProperties() {
+        return properties;
+    }
+
+    public void setProperties(int properties) {
+        this.properties = properties;
+    }
+
+    public int getVersionNo() {
+        return versionNo;
+    }
+
+    public void setVersionNo(int versionNo) {
+        this.versionNo = versionNo;
+    }
+
     public String getClientId() {
-        return header.getMobileNo();
+        return clientId;
     }
 
-    @Override
-    public Integer getMessageId() {
-        return header.getMessageId();
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 
-    @Override
-    public String getMessageName() {
-        return MessageId.get(header.getMessageId());
-    }
-
-    @Override
     public int getSerialNo() {
-        return header.getSerialNo();
+        return serialNo;
+    }
+
+    public void setSerialNo(int serialNo) {
+        this.serialNo = serialNo;
+    }
+
+    public Integer getPackageTotal() {
+        if (isSubpackage())
+            return packageTotal;
+        return null;
+    }
+
+    public void setPackageTotal(Integer packageTotal) {
+        this.packageTotal = packageTotal;
+    }
+
+    public Integer getPackageNo() {
+        if (isSubpackage())
+            return packageNo;
+        return null;
+    }
+
+    public void setPackageNo(Integer packageNo) {
+        this.packageNo = packageNo;
+    }
+
+    public boolean isVerified() {
+        return verified;
+    }
+
+    public void setVerified(boolean verified) {
+        this.verified = verified;
     }
 
     @Transient
@@ -64,6 +135,7 @@ public class JTMessage implements Message {
         this.session = session;
     }
 
+    @Transient
     public byte[] getPayload() {
         return payload;
     }
@@ -72,28 +144,101 @@ public class JTMessage implements Message {
         this.payload = payload;
     }
 
-    private static int reflectMessageId = -1;
+    @Transient
+    @Override
+    public String getMessageName() {
+        return MessageId.get(messageId);
+    }
 
     public int reflectMessageId() {
-        if (reflectMessageId == -1) {
-            io.github.yezhihao.protostar.annotation.Message messageType = this.getClass().getAnnotation(io.github.yezhihao.protostar.annotation.Message.class);
-            if (messageType == null || messageType.value().length <= 0) {
-                reflectMessageId = 0;
-            } else {
-                reflectMessageId = messageType.value()[0];
-            }
-        }
-        return reflectMessageId;
+        io.github.yezhihao.protostar.annotation.Message messageType = this.getClass().getAnnotation(io.github.yezhihao.protostar.annotation.Message.class);
+        if (messageType != null && messageType.value().length > 0)
+            return messageType.value()[0];
+        return 0;
     }
 
     public void transform() {
     }
 
+    private static final int BODY_LENGTH = 0b0000_0011_1111_1111;
+    private static final int ENCRYPTION = 0b00011_100_0000_0000;
+    private static final int SUBPACKAGE = 0b0010_0000_0000_0000;
+    private static final int VERSION = 0b0100_0000_0000_0000;
+    private static final int RESERVED = 0b1000_0000_0000_0000;
+
+    /** 消息体长度 */
+    public int getBodyLength() {
+        return this.properties & BODY_LENGTH;
+    }
+
+    public void setBodyLength(int bodyLength) {
+        this.properties ^= (properties & BODY_LENGTH);
+        this.properties |= bodyLength;
+    }
+
+    /** 加密方式 */
+    public int getEncryption() {
+        return (properties & ENCRYPTION) >> 10;
+    }
+
+    public void setEncryption(int encryption) {
+        this.properties ^= (properties & ENCRYPTION);
+        this.properties |= (encryption << 10);
+    }
+
+    /** 是否分包 */
+    public boolean isSubpackage() {
+        return (properties & SUBPACKAGE) == SUBPACKAGE;
+    }
+
+    public void setSubpackage(boolean subpackage) {
+        if (subpackage)
+            this.properties |= SUBPACKAGE;
+        else
+            this.properties ^= (properties & SUBPACKAGE);
+    }
+
+    /** 是否有版本 */
+    public boolean isVersion() {
+        return (properties & VERSION) == VERSION;
+    }
+
+    public void setVersion(boolean version) {
+        if (version)
+            this.properties |= VERSION;
+        else
+            this.properties ^= (properties & VERSION);
+    }
+
+    /** 保留位 */
+    public boolean isReserved() {
+        return (properties & RESERVED) == RESERVED;
+    }
+
+    public void setReserved(boolean reserved) {
+        if (reserved)
+            this.properties |= RESERVED;
+        else
+            this.properties ^= (properties & RESERVED);
+    }
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer(768);
-        sb.append(header).append(',');
-        sb.append(new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE, sb, null, false, false, true).setExcludeFieldNames("header"));
+        sb.append(MessageId.get(messageId));
+        sb.append('[');
+        sb.append("cid=").append(clientId);
+        sb.append(",msg=").append(messageId);
+        sb.append(",ver=").append(versionNo);
+        sb.append(",ser=").append(serialNo);
+        sb.append(",prop=").append(properties);
+        if (isSubpackage()) {
+            sb.append(",pt=").append(packageTotal);
+            sb.append(",pn=").append(packageNo);
+        }
+        sb.append(']');
+        sb.append(',');
+        sb.append(new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE, sb, null, false, false, true).setExcludeFieldNames("messageId", "properties", "versionNo", "clientId", "serialNo", "packageTotal", "packageNo", "verified", "bodyLength", "encryption", "subpackage", "version", "reserved"));
         return sb.toString();
     }
 }

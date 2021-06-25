@@ -1,6 +1,6 @@
 package org.yzh.protocol.codec;
 
-import org.yzh.protocol.basics.Header;
+import org.yzh.protocol.basics.JTMessage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class MultiPacket {
 
-    private final Header header;
+    private final JTMessage firstPacket;
     private int serialNo = -1;
 
     private int retryCount;
@@ -23,12 +23,12 @@ public class MultiPacket {
     private int count = 0;
     private final byte[][] packets;
 
-    public MultiPacket(Header header) {
-        this.header = header;
+    public MultiPacket(JTMessage firstPacket) {
+        this.firstPacket = firstPacket;
         this.createTime = (int) (System.currentTimeMillis() / 1000);
         this.activeTime = createTime;
 
-        this.packets = new byte[header.getPackageTotal()][];
+        this.packets = new byte[firstPacket.getPackageTotal()][];
     }
 
     public byte[][] addAndGet(int packetNo, byte[] packetData) {
@@ -80,8 +80,8 @@ public class MultiPacket {
         return count == packets.length;
     }
 
-    public Header getHeader() {
-        return header;
+    public JTMessage getFirstPacket() {
+        return firstPacket;
     }
 
     public int getSerialNo() {
@@ -95,18 +95,18 @@ public class MultiPacket {
 
     @Override
     public String toString() {
-        int length = packets.length;
-        final StringBuilder sb = new StringBuilder(82 + (length * 3));
+        int total = packets.length;
+        final StringBuilder sb = new StringBuilder(82 + (total * 3));
         sb.append('[');
-        sb.append("clientId=").append(header.getMobileNo());
-        sb.append(", messageId=").append(Integer.toHexString(header.getMessageId()));
-        sb.append(", total=").append(length);
+        sb.append("cid=").append(firstPacket.getClientId());
+        sb.append(", msg=").append(Integer.toHexString(firstPacket.getMessageId()));
+        sb.append(", total=").append(total);
         sb.append(", count=").append(count);
         sb.append(", retryCount=").append(retryCount);
         sb.append(", time=").append(getTotalWaitTime());
         sb.append(", packets=");
         sb.append('{');
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < total; i++) {
             if (packets[i] != null) sb.append(i + 1);
             else sb.append(' ');
             sb.append(',');

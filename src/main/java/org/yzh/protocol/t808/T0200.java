@@ -6,9 +6,11 @@ import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
+import org.yzh.protocol.commons.MessageId;
 import org.yzh.protocol.commons.transform.AttributeConverter;
+import org.yzh.web.commons.DateUtils;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -18,17 +20,26 @@ import java.util.Map;
 @Message(JT808.位置信息汇报)
 public class T0200 extends JTMessage {
 
+    @Field(index = 0, type = DataType.DWORD, desc = "报警标志")
     private int warnBit;
+    @Field(index = 4, type = DataType.DWORD, desc = "状态")
     private int statusBit;
+    @Field(index = 8, type = DataType.DWORD, desc = "纬度")
     private int latitude;
+    @Field(index = 12, type = DataType.DWORD, desc = "经度")
     private int longitude;
+    @Field(index = 16, type = DataType.WORD, desc = "海拔(米)")
     private int altitude;
+    @Field(index = 18, type = DataType.WORD, desc = "速度(1/10公里每小时)")
     private int speed;
+    @Field(index = 20, type = DataType.WORD, desc = "方向")
     private int direction;
-    private LocalDateTime dateTime;
+    @Field(index = 22, type = DataType.BCD8421, length = 6, desc = "时间(YYMMDDHHMMSS)")
+    private String dateTime;
+    @Convert(converter = AttributeConverter.class)
+    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息")
     private Map<Integer, Object> attributes;
 
-    @Field(index = 0, type = DataType.DWORD, desc = "报警标志")
     public int getWarnBit() {
         return warnBit;
     }
@@ -37,7 +48,6 @@ public class T0200 extends JTMessage {
         this.warnBit = warnBit;
     }
 
-    @Field(index = 4, type = DataType.DWORD, desc = "状态")
     public int getStatusBit() {
         return statusBit;
     }
@@ -46,7 +56,6 @@ public class T0200 extends JTMessage {
         this.statusBit = statusBit;
     }
 
-    @Field(index = 8, type = DataType.DWORD, desc = "纬度")
     public int getLatitude() {
         return latitude;
     }
@@ -55,7 +64,6 @@ public class T0200 extends JTMessage {
         this.latitude = latitude;
     }
 
-    @Field(index = 12, type = DataType.DWORD, desc = "经度")
     public int getLongitude() {
         return longitude;
     }
@@ -64,7 +72,6 @@ public class T0200 extends JTMessage {
         this.longitude = longitude;
     }
 
-    @Field(index = 16, type = DataType.WORD, desc = "海拔")
     public int getAltitude() {
         return altitude;
     }
@@ -73,7 +80,6 @@ public class T0200 extends JTMessage {
         this.altitude = altitude;
     }
 
-    @Field(index = 18, type = DataType.WORD, desc = "速度(1/10公里每小时)")
     public int getSpeed() {
         return speed;
     }
@@ -82,7 +88,6 @@ public class T0200 extends JTMessage {
         this.speed = speed;
     }
 
-    @Field(index = 20, type = DataType.WORD, desc = "方向")
     public int getDirection() {
         return direction;
     }
@@ -91,17 +96,14 @@ public class T0200 extends JTMessage {
         this.direction = direction;
     }
 
-    @Field(index = 22, type = DataType.BCD8421, length = 6, desc = "时间")
-    public LocalDateTime getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 
-    @Convert(converter = AttributeConverter.class)
-    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息")
     public Map<Integer, Object> getAttributes() {
         return attributes;
     }
@@ -113,7 +115,19 @@ public class T0200 extends JTMessage {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder(512);
-        sb.append(header).append(',');
+        sb.append(MessageId.get(messageId));
+        sb.append('[');
+        sb.append("cid=").append(clientId);
+        sb.append(",msg=").append(messageId);
+        sb.append(",ver=").append(versionNo);
+        sb.append(",ser=").append(serialNo);
+        sb.append(",prop=").append(properties);
+        if (isSubpackage()) {
+            sb.append(",pt=").append(packageTotal);
+            sb.append(",pn=").append(packageNo);
+        }
+        sb.append(']');
+        sb.append(',');
         sb.append("T0200[");
         sb.append("dateTime=").append(dateTime);
         sb.append(", latitude=").append(latitude);
@@ -121,8 +135,8 @@ public class T0200 extends JTMessage {
         sb.append(", altitude=").append(altitude);
         sb.append(", speed=").append(speed);
         sb.append(", direction=").append(direction);
-        sb.append(", warnBit=").append(warnBit);
-        sb.append(", statusBit=").append(statusBit);
+        sb.append(", warnBit=").append(Integer.toBinaryString(warnBit));
+        sb.append(", statusBit=").append(Integer.toBinaryString(statusBit));
         sb.append(", attributes=").append(attributes);
         sb.append(']');
         return sb.toString();
@@ -135,11 +149,13 @@ public class T0200 extends JTMessage {
         lng = longitude / 1000000d;
         lat = latitude / 1000000d;
         speedKph = speed / 10f;
+        deviceTime = DateUtils.parse(dateTime);
     }
 
-    private double lng;
-    private double lat;
-    private float speedKph;
+    private transient double lng;
+    private transient double lat;
+    private transient float speedKph;
+    private transient Date deviceTime;
 
     public double getLng() {
         return lng;
@@ -151,5 +167,9 @@ public class T0200 extends JTMessage {
 
     public float getSpeedKph() {
         return speedKph;
+    }
+
+    public Date getDeviceTime() {
+        return deviceTime;
     }
 }
