@@ -21,7 +21,7 @@ public class T1210 extends JTMessage {
     private AlarmId alarmId;
     @Field(index = 23, type = DataType.STRING, length = 32, desc = "报警编号")
     private String alarmNo;
-    @Field(index = 55, type = DataType.BYTE, desc = "信息类型: 0.正常报警文件信息 1.补传报警文件信息")
+    @Field(index = 55, type = DataType.BYTE, desc = "信息类型：0.正常报警文件信息 1.补传报警文件信息")
     private int type;
     @Field(index = 56, type = DataType.BYTE, desc = "附件数量")
     private int total;
@@ -77,7 +77,7 @@ public class T1210 extends JTMessage {
     }
 
     public static class Item {
-        @Field(index = 1, type = DataType.STRING, lengthSize = 1, desc = "文件名称")
+        @Field(index = 0, type = DataType.STRING, lengthSize = 1, desc = "文件名称")
         private String name;
         @Field(index = 1, type = DataType.DWORD, desc = "文件大小")
         private long size;
@@ -96,6 +96,15 @@ public class T1210 extends JTMessage {
 
         public void setSize(long size) {
             this.size = size;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(80);
+            sb.append("{name=").append(name);
+            sb.append(",size=").append(size);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

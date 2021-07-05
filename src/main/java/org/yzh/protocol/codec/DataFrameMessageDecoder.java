@@ -15,7 +15,7 @@ import org.yzh.protocol.jsatl12.DataPacket;
  */
 public class DataFrameMessageDecoder extends JTMessageDecoder {
 
-    private RuntimeSchema<? extends JTMessage> dataFrameSchema;
+    private RuntimeSchema<DataPacket> dataFrameSchema;
     private byte[] dataFramePrefix;
 
     public DataFrameMessageDecoder(String basePackage, byte[] dataFramePrefix) {
@@ -25,9 +25,14 @@ public class DataFrameMessageDecoder extends JTMessageDecoder {
     }
 
     @Override
-    public JTMessage decode(ByteBuf buf, Session session) {
-        if (ByteBufUtils.startsWith(buf, dataFramePrefix))
-            return dataFrameSchema.readFrom(buf);
-        return super.decode(buf, session);
+    public JTMessage decode(ByteBuf input, Session session) {
+        if (ByteBufUtils.startsWith(input, dataFramePrefix)) {
+            DataPacket message = new DataPacket();
+            message.setSession(session);
+            message.setPayload(input);
+            dataFrameSchema.mergeFrom(input, message);
+            return message;
+        }
+        return super.decode(input, session);
     }
 }

@@ -19,18 +19,18 @@ public class AlarmDSM implements Alarm {
 
     @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
     private long serialNo;
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态: 0.不可用 1.开始标志 2.结束标志")
+    @Field(index = 4, type = DataType.BYTE, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
     private int state;
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型: " +
-            "0x01.疲劳驾驶报警 " +
-            "0x02.接打电话报警 " +
-            "0x03.抽烟报警 " +
-            "0x04.分神驾驶报警 " +
-            "0x05.驾驶员异常报警 " +
-            "0x06~0x0F.用户自定义 " +
-            "0x10.自动抓拍事件 " +
-            "0x11.驾驶员变更事件 " +
-            "0x12~0x1F.用户自定义")
+    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型：" +
+            " 1.疲劳驾驶报警" +
+            " 2.接打电话报警" +
+            " 3.抽烟报警" +
+            " 4.分神驾驶报警" +
+            " 5.驾驶员异常报警" +
+            " 6~15.用户自定义" +
+            " 16.自动抓拍事件" +
+            " 17.驾驶员变更事件" +
+            " 18~31.用户自定义")
     private int type;
     @Field(index = 6, type = DataType.BYTE, desc = "报警级别")
     private int level;
@@ -159,8 +159,8 @@ public class AlarmDSM implements Alarm {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("AlarmDSM{");
-        sb.append("serialNo=").append(serialNo);
+        final StringBuilder sb = new StringBuilder(400);
+        sb.append("AlarmDSM{serialNo=").append(serialNo);
         sb.append(", state=").append(state);
         sb.append(", type=").append(type);
         sb.append(", level=").append(level);
@@ -168,8 +168,8 @@ public class AlarmDSM implements Alarm {
         sb.append(", reserved=").append(reserved);
         sb.append(", speed=").append(speed);
         sb.append(", altitude=").append(altitude);
-        sb.append(", latitude=").append(latitude);
         sb.append(", longitude=").append(longitude);
+        sb.append(", latitude=").append(latitude);
         sb.append(", dateTime=").append(dateTime);
         sb.append(", status=").append(status);
         sb.append(", alarmId=").append(alarmId);

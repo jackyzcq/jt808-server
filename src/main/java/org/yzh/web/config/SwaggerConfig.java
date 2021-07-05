@@ -56,7 +56,7 @@ public class SwaggerConfig {
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("部标JT/T808协议接入平台")
-                .contact(new Contact("问题交流群: 906230542", "https://gitee.com/yezhihao", ""))
+                .contact(new Contact("问题交流群：906230542", "https://gitee.com/yezhihao", ""))
                 .termsOfServiceUrl("https://gitee.com/yezhihao")
                 .license("")
                 .licenseUrl("")
@@ -81,6 +81,7 @@ public class SwaggerConfig {
         ignores.add("version");
         ignores.add("reserved");
         ignores.add("payload");
+        ignores.add("session");
         ignores.add("messageName");
     }
 
@@ -122,8 +123,7 @@ public class SwaggerConfig {
                 ParameterBuilder parameterBuilder = context.getParameterBuilder();
                 RequestParameterBuilder requestParameterBuilder = context.getRequestParameterBuilder();
 
-                String parentName = context.getParentName();
-                boolean hidden = ignores.contains(context.getFieldName()) || "session".equals(parentName);
+                boolean hidden = ignores.contains(context.getFieldName()) || ignores.contains(context.getParentName());
 
                 parameterBuilder.hidden(hidden);
                 requestParameterBuilder.hidden(hidden);

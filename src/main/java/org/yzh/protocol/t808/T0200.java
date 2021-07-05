@@ -28,7 +28,7 @@ public class T0200 extends JTMessage {
     private int latitude;
     @Field(index = 12, type = DataType.DWORD, desc = "经度")
     private int longitude;
-    @Field(index = 16, type = DataType.WORD, desc = "海拔(米)")
+    @Field(index = 16, type = DataType.WORD, desc = "高程(米)")
     private int altitude;
     @Field(index = 18, type = DataType.WORD, desc = "速度(1/10公里每小时)")
     private int speed;
@@ -115,30 +115,30 @@ public class T0200 extends JTMessage {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder(512);
-        sb.append(MessageId.get(messageId));
-        sb.append('[');
-        sb.append("cid=").append(clientId);
-        sb.append(",msg=").append(messageId);
-        sb.append(",ver=").append(versionNo);
-        sb.append(",ser=").append(serialNo);
-        sb.append(",prop=").append(properties);
-        if (isSubpackage()) {
-            sb.append(",pt=").append(packageTotal);
-            sb.append(",pn=").append(packageNo);
+        if (clientId != null) {
+            sb.append(MessageId.get(messageId));
+            sb.append('[');
+            sb.append("cid=").append(clientId);
+            sb.append(",msg=").append(messageId);
+            sb.append(",ver=").append(versionNo);
+            sb.append(",ser=").append(serialNo);
+            sb.append(",prop=").append(properties);
+            if (isSubpackage()) {
+                sb.append(",pt=").append(packageTotal);
+                sb.append(",pn=").append(packageNo);
+            }
+            sb.append("],T0200");
         }
-        sb.append(']');
-        sb.append(',');
-        sb.append("T0200[");
-        sb.append("dateTime=").append(dateTime);
-        sb.append(", latitude=").append(latitude);
-        sb.append(", longitude=").append(longitude);
-        sb.append(", altitude=").append(altitude);
-        sb.append(", speed=").append(speed);
-        sb.append(", direction=").append(direction);
-        sb.append(", warnBit=").append(Integer.toBinaryString(warnBit));
-        sb.append(", statusBit=").append(Integer.toBinaryString(statusBit));
-        sb.append(", attributes=").append(attributes);
-        sb.append(']');
+        sb.append("{dateTime=").append(dateTime);
+        sb.append(",longitude=").append(longitude);
+        sb.append(",latitude=").append(latitude);
+        sb.append(",altitude=").append(altitude);
+        sb.append(",speed=").append(speed);
+        sb.append(",direction=").append(direction);
+        sb.append(",warnBit=").append(Integer.toBinaryString(warnBit));
+        sb.append(",statusBit=").append(Integer.toBinaryString(statusBit));
+        sb.append(",attributes=").append(attributes);
+        sb.append('}');
         return sb.toString();
     }
 

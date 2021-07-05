@@ -19,9 +19,9 @@ public class AlarmBSD implements Alarm {
 
     @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
     private long serialNo;
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态: 0.不可用 1.开始标志 2.结束标志")
+    @Field(index = 4, type = DataType.BYTE, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
     private int state;
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型: 1.后方接近报警 2.左侧后方接近报警 3.右侧后方接近报警")
+    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型：1.后方接近报警 2.左侧后方接近报警 3.右侧后方接近报警")
     private int type;
     @Field(index = 6, type = DataType.BYTE, desc = "车速")
     private int speed;
@@ -120,14 +120,14 @@ public class AlarmBSD implements Alarm {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("AlarmBSD{");
-        sb.append("serialNo=").append(serialNo);
+        final StringBuilder sb = new StringBuilder(300);
+        sb.append("AlarmBSD{serialNo=").append(serialNo);
         sb.append(", state=").append(state);
         sb.append(", type=").append(type);
         sb.append(", speed=").append(speed);
         sb.append(", altitude=").append(altitude);
-        sb.append(", latitude=").append(latitude);
         sb.append(", longitude=").append(longitude);
+        sb.append(", latitude=").append(latitude);
         sb.append(", dateTime=").append(dateTime);
         sb.append(", status=").append(status);
         sb.append(", alarmId=").append(alarmId);

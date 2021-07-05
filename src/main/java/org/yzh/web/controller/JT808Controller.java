@@ -2,7 +2,6 @@ package org.yzh.web.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -44,7 +43,7 @@ public class JT808Controller {
                                  @Parameter(description = "IP地址") @RequestParam(required = false) String host,
                                  @Parameter(description = "端口号") @RequestParam(required = false) Integer port) {
 
-        host = StringUtils.isBlank(host) ? this.host : host;
+        host = StrUtils.isBlank(host) ? this.host : host;
         port = port == null ? this.port : port;
 
         T9208 request = new T9208();
@@ -72,7 +71,7 @@ public class JT808Controller {
     public T0104 getParameters(@Parameter(description = "终端手机号") @RequestParam String clientId,
                                @Parameter(description = "参数ID列表(为空查询全部,多个以逗号','分隔)") @RequestParam(required = false) String id) {
         JTMessage request;
-        if (StringUtils.isBlank(id)) {
+        if (StrUtils.isBlank(id)) {
             request = new JTMessage(JT808.查询终端参数);
         } else {
             request = new T8106(StrUtils.toInts(id, ","));
@@ -203,7 +202,7 @@ public class JT808Controller {
     @Operation(summary = "8601 8603 8605 8607 删除区域")
     @DeleteMapping("area")
     public T0001 removeArea(@Parameter(description = "终端手机号") @RequestParam String clientId,
-                            @Parameter(description = "区域类型: 1.圆形 2.矩形 3.多边形 4.路线") @RequestParam int type,
+                            @Parameter(description = "区域类型：1.圆形 2.矩形 3.多边形 4.路线") @RequestParam int type,
                             @Parameter(description = "区域ID列表(多个以逗号','分隔)") @RequestParam String id) {
         T8601 request = new T8601(StrUtils.toInts(id, ","));
         request.setMessageId(Shape.toMessageId(type));
@@ -214,7 +213,7 @@ public class JT808Controller {
     @Operation(summary = "8608 查询区域或线路数据")
     @GetMapping("area/location")
     public T0608 findAreaLocation(@Parameter(description = "终端手机号") @RequestParam String clientId,
-                                  @Parameter(description = "查询类型: 1.圆形 2.矩形 3.多边形 4.路线") @RequestParam int type,
+                                  @Parameter(description = "查询类型：1.圆形 2.矩形 3.多边形 4.路线") @RequestParam int type,
                                   @Parameter(description = "区域ID列表(多个以逗号','分隔)") @RequestParam String id) {
         T8608 request = new T8608(type, StrUtils.toInts(id, ","));
         T0608 response = messageManager.request(clientId, request, T0608.class);

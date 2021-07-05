@@ -52,7 +52,7 @@ public class T0802 extends JTMessage implements Response {
 
         @Field(index = 0, type = DataType.DWORD, desc = "多媒体数据ID")
         private int id;
-        @Field(index = 4, type = DataType.BYTE, desc = "多媒体类型: 0.图像 1.音频 2.视频")
+        @Field(index = 4, type = DataType.BYTE, desc = "多媒体类型：0.图像 1.音频 2.视频")
         private int type;
         @Field(index = 5, type = DataType.BYTE, desc = "通道ID")
         private int channelId;
@@ -110,6 +110,18 @@ public class T0802 extends JTMessage implements Response {
 
         public void setLocation(T0200 location) {
             this.location = location;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(768);
+            sb.append("{id=").append(id);
+            sb.append(",type=").append(type);
+            sb.append(",channelId=").append(channelId);
+            sb.append(",event=").append(event);
+            sb.append(",location=").append(location);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

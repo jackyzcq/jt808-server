@@ -3,9 +3,10 @@ package org.yzh.protocol.codec;
 import io.github.yezhihao.netmc.session.Session;
 import io.github.yezhihao.protostar.ProtostarUtil;
 import io.github.yezhihao.protostar.schema.RuntimeSchema;
-import io.netty.buffer.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.CompositeByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.buffer.UnpooledByteBufAllocator;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.Bit;
 import org.yzh.protocol.commons.JTUtils;
@@ -22,28 +23,21 @@ import java.util.Map;
  */
 public class JTMessageDecoder {
 
-    private static final Logger log = LoggerFactory.getLogger(JTMessageDecoder.class.getSimpleName());
-
     private Map<Integer, RuntimeSchema<JTMessage>> headerSchemaMap;
-
-    private static final boolean payload = false;
 
     public JTMessageDecoder(String basePackage) {
         ProtostarUtil.initial(basePackage);
         this.headerSchemaMap = ProtostarUtil.getRuntimeSchema(JTMessage.class);
     }
 
-    public JTMessage decode(ByteBuf buf) {
-        return decode(buf, null);
+    public JTMessage decode(ByteBuf input) {
+        return decode(input, null);
     }
 
-    public JTMessage decode(ByteBuf buf, Session session) {
-        buf = unescape(buf);
+    public JTMessage decode(ByteBuf input, Session session) {
+        ByteBuf buf = unescape(input);
 
         boolean verified = verify(buf);
-        if (!verified)
-            log.error("校验码错误{},{}", session, ByteBufUtil.hexDump(buf));
-
         int messageId = buf.getUnsignedShort(0);
         int properties = buf.getUnsignedShort(2);
 
@@ -74,10 +68,11 @@ public class JTMessageDecoder {
             message = new JTMessage();
         else
             message = bodySchema.newInstance();
+        message.setVerified(verified);
         message.setSession(session);
+        message.setPayload(input);
 
         headSchema.mergeFrom(buf.slice(0, headLen), message);
-        message.setVerified(verified);
 
         if (!confirmedVersion && session != null) {
             //通过缓存记录2011版本
@@ -97,7 +92,7 @@ public class JTMessageDecoder {
 
                 byte[][] packages = addAndGet(message, bytes);
                 if (packages == null)
-                    return null;
+                    return message;
 
                 ByteBuf bodyBuf = Unpooled.wrappedBuffer(packages);
                 bodySchema.mergeFrom(bodyBuf, message);
@@ -105,12 +100,6 @@ public class JTMessageDecoder {
             } else {
                 bodySchema.mergeFrom(buf.slice(headLen, bodyLen), message);
             }
-        }
-
-        if (payload) {
-            byte[] bytes = new byte[buf.readableBytes()];
-            buf.readBytes(bytes);
-            message.setPayload(bytes);
         }
         return message;
     }

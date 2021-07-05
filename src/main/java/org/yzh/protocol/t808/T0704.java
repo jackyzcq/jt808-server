@@ -17,7 +17,7 @@ public class T0704 extends JTMessage {
 
     @Field(index = 0, type = DataType.WORD, desc = "数据项个数")
     private int total;
-    @Field(index = 2, type = DataType.BYTE, desc = "位置数据类型: 0.正常位置批量汇报 1.盲区补报")
+    @Field(index = 2, type = DataType.BYTE, desc = "位置数据类型：0.正常位置批量汇报 1.盲区补报")
     private int type;
     @Field(index = 3, type = DataType.LIST, desc = "位置汇报数据项")
     private List<Item> items;
@@ -64,6 +64,11 @@ public class T0704 extends JTMessage {
 
         public void setLocation(T0200 location) {
             this.location = location;
+        }
+
+        @Override
+        public String toString() {
+            return location.toString();
         }
     }
 }

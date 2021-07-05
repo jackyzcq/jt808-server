@@ -5,8 +5,8 @@ import io.github.yezhihao.netmc.core.model.Message;
 import io.github.yezhihao.netmc.session.Session;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import io.github.yezhihao.protostar.util.ToStringBuilder;
+import io.netty.buffer.ByteBuf;
 import org.yzh.protocol.commons.MessageId;
 
 import java.beans.Transient;
@@ -37,11 +37,11 @@ public class JTMessage implements Message {
     @Field(index = 19, type = DataType.WORD, desc = "包序号", version = 1)
     protected Integer packageNo;
     /** bcc校验 */
-    private boolean verified = true;
+    protected boolean verified = true;
 
-    private transient Session session;
+    protected transient Session session;
 
-    private transient byte[] payload;
+    protected transient ByteBuf payload;
 
 
     public JTMessage() {
@@ -136,11 +136,11 @@ public class JTMessage implements Message {
     }
 
     @Transient
-    public byte[] getPayload() {
+    public ByteBuf getPayload() {
         return payload;
     }
 
-    public void setPayload(byte[] payload) {
+    public void setPayload(ByteBuf payload) {
         this.payload = payload;
     }
 
@@ -224,7 +224,7 @@ public class JTMessage implements Message {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(768);
+        final StringBuilder sb = new StringBuilder(768);
         sb.append(MessageId.get(messageId));
         sb.append('[');
         sb.append("cid=").append(clientId);
@@ -238,7 +238,7 @@ public class JTMessage implements Message {
         }
         sb.append(']');
         sb.append(',');
-        sb.append(new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE, sb, null, false, false, true).setExcludeFieldNames("messageId", "properties", "versionNo", "clientId", "serialNo", "packageTotal", "packageNo", "verified", "bodyLength", "encryption", "subpackage", "version", "reserved"));
-        return sb.toString();
+        String result = ToStringBuilder.toString(sb, this, false, "messageId", "clientId", "versionNo", "serialNo", "properties", "packageTotal", "packageNo");
+        return result;
     }
 }

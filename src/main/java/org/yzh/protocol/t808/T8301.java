@@ -18,7 +18,7 @@ import java.util.List;
 public class T8301 extends JTMessage {
 
     /** @see org.yzh.protocol.commons.Action */
-    @Field(index = 0, type = DataType.BYTE, desc = "设置类型: 0.清空 1.更新(先清空,后追加) 2.追加 3.修改 4.指定删除")
+    @Field(index = 0, type = DataType.BYTE, desc = "设置类型：0.清空 1.更新(先清空,后追加) 2.追加 3.修改 4.指定删除")
     private int type;
     @Field(index = 1, type = DataType.BYTE, desc = "设置总数")
     private int total;
@@ -87,6 +87,15 @@ public class T8301 extends JTMessage {
 
         public void setContent(String content) {
             this.content = content;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(40);
+            sb.append("{id=").append(id);
+            sb.append(",content=").append(content);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

@@ -44,8 +44,8 @@ public class ParameterType extends PrepareLoadStrategy {
                 .addSchema(0x001C, DataType.DWORD)//"道路运输证IC卡认证主服务器UDP端口"
                 .addSchema(0x001D, stringSchema)//"道路运输证IC卡认证主服务器IP地址或域名,端口同主服务器"
 
-                .addSchema(0x0020, DataType.DWORD)//"位置汇报策略: 0.定时汇报 1.定距汇报 2.定时和定距汇报"
-                .addSchema(0x0021, DataType.DWORD)//"位置汇报方案: 0.根据ACC状态 1.根据登录状态和ACC状态,先判断登录状态,若登录再根据ACC状态"
+                .addSchema(0x0020, DataType.DWORD)//"位置汇报策略：0.定时汇报 1.定距汇报 2.定时和定距汇报"
+                .addSchema(0x0021, DataType.DWORD)//"位置汇报方案：0.根据ACC状态 1.根据登录状态和ACC状态,先判断登录状态,若登录再根据ACC状态"
                 .addSchema(0x0022, DataType.DWORD)//"驾驶员未登录汇报时间间隔,单位为秒(s),>0"
 
                 //JT808 2019
@@ -99,20 +99,20 @@ public class ParameterType extends PrepareLoadStrategy {
                 .addSchema(0x0064, DataType.DWORD)//"定时拍照参数"
                 .addSchema(0x0065, DataType.DWORD)//"定距拍照参数"
 
-                .addSchema(0x0070, DataType.DWORD)//"图像/视频质量,1-10,1最好"
-                .addSchema(0x0071, DataType.DWORD)//"亮度,0-255"
-                .addSchema(0x0072, DataType.DWORD)//"对比度,0-127"
-                .addSchema(0x0073, DataType.DWORD)//"饱和度,0-127"
-                .addSchema(0x0074, DataType.DWORD)//"色度,0-255"
+                .addSchema(0x0070, DataType.DWORD)//"图像/视频质量,1~10,1最好"
+                .addSchema(0x0071, DataType.DWORD)//"亮度,0~255"
+                .addSchema(0x0072, DataType.DWORD)//"对比度,0~127"
+                .addSchema(0x0073, DataType.DWORD)//"饱和度,0~127"
+                .addSchema(0x0074, DataType.DWORD)//"色度,0~255"
 
                 //JT1078 start
-                .addSchema(ParamVideo.id, ParamVideo.Schema.INSTANCE)//"音视频参数设置,描述见表2"
-                .addSchema(ParamChannels.id, ParamChannels.Schema.INSTANCE)//"音视频通道列表设置,描述见表3"
-                .addSchema(ParamVideoSingle.id, ParamVideoSingle.Schema.INSTANCE)//"单独视频通道参数设置,描述见表5"
-                .addSchema(ParamVideoSpecialAlarm.id, ParamVideoSpecialAlarm.Schema.INSTANCE)//"特殊报警录像参数设置,描述见表7"
+                .addSchema(ParamVideo.id, ParamVideo.S.INSTANCE)//"音视频参数设置,描述见表2"
+                .addSchema(ParamChannels.id, ParamChannels.S.INSTANCE)//"音视频通道列表设置,描述见表3"
+                .addSchema(ParamVideoSingle.id, ParamVideoSingle.S.INSTANCE)//"单独视频通道参数设置,描述见表5"
+                .addSchema(ParamVideoSpecialAlarm.id, ParamVideoSpecialAlarm.S.INSTANCE)//"特殊报警录像参数设置,描述见表7"
                 .addSchema(0x007A, DataType.DWORD)//"视频相关报警屏蔽字,和表13的视频报警标志位定义相对应,相应位为1则相应类型的报警被屏蔽"
-                .addSchema(ParamImageIdentifyAlarm.id, ParamImageIdentifyAlarm.Schema.INSTANCE)//" 图像分析报警参数设置描述见表8"
-                .addSchema(ParamSleepWake.id, ParamSleepWake.Schema.INSTANCE)//"终端休眠唤醒模式设置,描述见表9"
+                .addSchema(ParamImageIdentifyAlarm.id, ParamImageIdentifyAlarm.S.INSTANCE)//" 图像分析报警参数设置描述见表8"
+                .addSchema(ParamSleepWake.id, ParamSleepWake.S.INSTANCE)//"终端休眠唤醒模式设置,描述见表9"
                 //JT1078 end
 
                 .addSchema(0x0080, DataType.DWORD)//"车辆里程表读数,1/10km"
@@ -136,7 +136,7 @@ public class ParameterType extends PrepareLoadStrategy {
                 //JSATL12 start
                 .addSchema(ParamADAS.id, ParamADAS.S.INSTANCE)//"高级驾驶辅助系统参数,见表4-1010"
                 .addSchema(ParamDSM.id, ParamDSM.S.INSTANCE)//"驾驶员状态监测系统参数,见表4-1111"
-                .addSchema(ParamTPMS.id, ParamTPMS.Schema.INSTANCE)//"胎压监测系统参数,见表4-1212"
+                .addSchema(ParamTPMS.id, ParamTPMS.S.INSTANCE)//"胎压监测系统参数,见表4-1212"
                 .addSchema(ParamBSD.id, ParamBSD.S.INSTANCE)//"盲区监测系统参数,见表4-1313"
         ;
     }

@@ -7,7 +7,7 @@ import org.yzh.protocol.BeanTest;
 import org.yzh.protocol.JT808Beans;
 import org.yzh.protocol.codec.JTMessageDecoder;
 import org.yzh.protocol.codec.JTMessageEncoder;
-import org.yzh.web.component.adapter.JTMessageAdapter;
+import org.yzh.protocol.codec.JTMessageAdapter;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class ClientTest {
         ClientConfig jtConfig = new ClientConfig.Builder()
                 .setIp("127.0.0.1")
                 .setPort(7611)
-                .setMaxFrameLength(1024)
+                .setMaxFrameLength(2 + 21 + 1023 + 2)
                 .setDelimiters(new byte[]{0x7e})
                 .setDecoder(messageAdapter)
                 .setEncoder(messageAdapter)
