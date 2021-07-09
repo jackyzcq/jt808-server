@@ -1,4 +1,4 @@
-package org.yzh.protocol.commons.transform;
+package org.yzh.web.model.vo;
 
 import io.github.yezhihao.netmc.util.AdapterMap;
 import io.swagger.v3.oas.annotations.media.Schema;

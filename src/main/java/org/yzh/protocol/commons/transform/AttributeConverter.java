@@ -1,45 +1,45 @@
 package org.yzh.protocol.commons.transform;
 
-import io.github.yezhihao.protostar.IdStrategy;
-import io.github.yezhihao.protostar.Schema;
+import io.github.yezhihao.protostar.DataType;
+import io.github.yezhihao.protostar.PrepareLoadStrategy;
+import io.github.yezhihao.protostar.ProtostarUtil;
 import io.github.yezhihao.protostar.converter.MapConverter;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.yzh.protocol.commons.transform.attribute.*;
 
 /**
- * 位置附加信息转换器
+ * 位置附加信息转换器(苏标)
  * @author yezhihao
  * @home https://gitee.com/yezhihao/jt808-server
  */
 public class AttributeConverter extends MapConverter<Integer, Object> {
 
-    private static final Logger log = LoggerFactory.getLogger(AttributeConverter.class);
-
-    private static final IdStrategy INSTANCE = AttributeType.INSTANCE;
-
     @Override
-    public Object convert(Integer key, ByteBuf input) {
-        if (!input.isReadable())
-            return null;
-        Schema schema = INSTANCE.getSchema(key);
-        if (schema != null)
-            return INSTANCE.readFrom(key, input);
-        byte[] bytes = new byte[input.readableBytes()];
-        input.readBytes(bytes);
-        log.debug("未识别的附加信息:ID[dec:{},hex:{}], VALUE[{}]", key, Integer.toHexString(key), ByteBufUtil.hexDump(bytes));
-        return bytes;
-    }
+    protected void addSchemas(PrepareLoadStrategy schemaRegistry) {
+        schemaRegistry
+                .addSchema(AttributeId.Mileage, DataType.DWORD)
+                .addSchema(AttributeId.Gas, DataType.WORD)
+                .addSchema(AttributeId.Speed, DataType.WORD)
+                .addSchema(AttributeId.AlarmEventId, DataType.WORD)
+                .addSchema(AttributeId.TirePressure, TirePressure.Schema.INSTANCE)
+                .addSchema(AttributeId.CarriageTemperature, DataType.WORD)
 
-    @Override
-    public void convert(Integer key, ByteBuf output, Object value) {
-        Schema schema = INSTANCE.getSchema(key);
-        if (schema != null) {
-            schema.writeTo(output, value);
-        } else {
-            log.warn("未注册的附加信息:ID[dec:{},hex:{}], VALUE[{}]", key, Integer.toHexString(key), value);
-        }
+                .addSchema(AttributeId.OverSpeedAlarm, OverSpeedAlarm.Schema.INSTANCE)
+                .addSchema(AttributeId.InOutAreaAlarm, InOutAreaAlarm.Schema.INSTANCE)
+                .addSchema(AttributeId.RouteDriveTimeAlarm, RouteDriveTimeAlarm.Schema.INSTANCE)
+
+                .addSchema(AttributeId.Signal, DataType.DWORD)
+                .addSchema(AttributeId.IoState, DataType.WORD)
+                .addSchema(AttributeId.AnalogQuantity, DataType.DWORD)
+                .addSchema(AttributeId.SignalStrength, DataType.BYTE)
+                .addSchema(AttributeId.GnssCount, DataType.BYTE)
+
+
+                .addSchema(AttributeId.AlarmADAS, ProtostarUtil.getRuntimeSchema(AlarmADAS.class, 0))
+                .addSchema(AttributeId.AlarmBSD, ProtostarUtil.getRuntimeSchema(AlarmBSD.class, 0))
+                .addSchema(AttributeId.AlarmDSM, ProtostarUtil.getRuntimeSchema(AlarmDSM.class, 0))
+                .addSchema(AttributeId.AlarmTPMS, ProtostarUtil.getRuntimeSchema(AlarmTPMS.class, 0))
+        ;
     }
 
     @Override

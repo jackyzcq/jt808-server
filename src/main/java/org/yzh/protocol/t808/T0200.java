@@ -1,14 +1,16 @@
 package org.yzh.protocol.t808;
 
 import io.github.yezhihao.protostar.DataType;
-import io.github.yezhihao.protostar.annotation.Convert;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 import org.yzh.protocol.commons.MessageId;
 import org.yzh.protocol.commons.transform.AttributeConverter;
+import org.yzh.protocol.commons.transform.AttributeConverterYue;
 import org.yzh.web.commons.DateUtils;
+import org.yzh.web.model.enums.SessionKey;
+import org.yzh.web.model.vo.DeviceInfo;
 
 import java.util.Date;
 import java.util.Map;
@@ -36,8 +38,8 @@ public class T0200 extends JTMessage {
     private int direction;
     @Field(index = 22, type = DataType.BCD8421, length = 6, desc = "时间(YYMMDDHHMMSS)")
     private String dateTime;
-    @Convert(converter = AttributeConverter.class)
-    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息")
+    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息", converter = AttributeConverter.class, version = {-1, 0})
+    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息(粤标)", converter = AttributeConverterYue.class, version = 1)
     private Map<Integer, Object> attributes;
 
     public int getWarnBit() {
@@ -150,12 +152,31 @@ public class T0200 extends JTMessage {
         lat = latitude / 1000000d;
         speedKph = speed / 10f;
         deviceTime = DateUtils.parse(dateTime);
+
+        DeviceInfo device = (DeviceInfo) session.getAttribute(SessionKey.DeviceInfo);
+        if (device != null) {
+            deviceId = device.getDeviceId();
+            plateNo = device.getPlateNo();
+        } else {
+            deviceId = clientId;
+            plateNo = "";
+        }
     }
 
+    private transient String deviceId;
+    private transient String plateNo;
     private transient double lng;
     private transient double lat;
     private transient float speedKph;
     private transient Date deviceTime;
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public String getPlateNo() {
+        return plateNo;
+    }
 
     public double getLng() {
         return lng;

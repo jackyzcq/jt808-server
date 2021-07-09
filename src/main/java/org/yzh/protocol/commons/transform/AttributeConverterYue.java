@@ -1,18 +1,18 @@
 package org.yzh.protocol.commons.transform;
 
 import io.github.yezhihao.protostar.DataType;
-import io.github.yezhihao.protostar.IdStrategy;
 import io.github.yezhihao.protostar.PrepareLoadStrategy;
+import io.github.yezhihao.protostar.ProtostarUtil;
+import io.github.yezhihao.protostar.converter.MapConverter;
+import io.netty.buffer.ByteBuf;
 import org.yzh.protocol.commons.transform.attribute.*;
 
 /**
- * 位置附加信息注册
+ * 位置附加信息转换器(粤标)
  * @author yezhihao
  * @home https://gitee.com/yezhihao/jt808-server
  */
-public class AttributeType extends PrepareLoadStrategy {
-
-    public static final IdStrategy INSTANCE = new AttributeType();
+public class AttributeConverterYue extends MapConverter<Integer, Object> {
 
     @Override
     protected void addSchemas(PrepareLoadStrategy schemaRegistry) {
@@ -34,10 +34,26 @@ public class AttributeType extends PrepareLoadStrategy {
                 .addSchema(AttributeId.SignalStrength, DataType.BYTE)
                 .addSchema(AttributeId.GnssCount, DataType.BYTE)
 
-                .addSchema(AttributeId.AlarmADAS, AlarmADAS.class)
-                .addSchema(AttributeId.AlarmBSD, AlarmBSD.class)
-                .addSchema(AttributeId.AlarmDSM, AlarmDSM.class)
-                .addSchema(AttributeId.AlarmTPMS, AlarmTPMS.class)
+
+                .addSchema(AttributeId.AlarmADAS, ProtostarUtil.getRuntimeSchema(AlarmADAS.class, 1))
+                .addSchema(AttributeId.AlarmBSD, ProtostarUtil.getRuntimeSchema(AlarmBSD.class, 1))
+                .addSchema(AttributeId.AlarmDSM, ProtostarUtil.getRuntimeSchema(AlarmDSM.class, 1))
+                .addSchema(AttributeId.AlarmTPMS, ProtostarUtil.getRuntimeSchema(AlarmTPMS.class, 1))
         ;
+    }
+
+    @Override
+    protected Integer readKey(ByteBuf input) {
+        return (int) input.readUnsignedByte();
+    }
+
+    @Override
+    protected void writeKey(ByteBuf output, Integer key) {
+        output.writeByte(key);
+    }
+
+    @Override
+    protected int valueSize() {
+        return 1;
     }
 }
