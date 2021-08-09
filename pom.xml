@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.8</version>
+        <version>2.4.9</version>
         <relativePath></relativePath>
     </parent>
 
@@ -33,7 +33,7 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-ui</artifactId>
-            <version>3.0.2</version>
+            <version>3.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -70,22 +70,14 @@
             <artifactId>spring-boot-starter-jetty</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>jakarta.websocket</groupId>
-                    <artifactId>jakarta.websocket-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.eclipse.jetty.websocket</groupId>
-                    <artifactId>websocket-server</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.eclipse.jetty.websocket</groupId>
-                    <artifactId>javax-websocket-server-impl</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.mortbay.jasper</groupId>
-                    <artifactId>apache-el</artifactId>
+                    <groupId>org.glassfish</groupId>
+                    <artifactId>jakarta.el</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -98,10 +90,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-handler</artifactId>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -140,18 +128,18 @@
             <artifactId>caffeine</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-handler</artifactId>
         </dependency>
         <dependency>
             <groupId>io.github.yezhihao</groupId>
             <artifactId>protostar</artifactId>
-            <version>2.0.2.RELEASE</version>
+            <version>2.0.3.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>io.github.yezhihao</groupId>
             <artifactId>netmc</artifactId>
-            <version>2.0.3.RELEASE</version>
+            <version>2.0.5.RELEASE</version>
         </dependency>
     </dependencies>
 

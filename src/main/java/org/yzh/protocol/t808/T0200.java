@@ -12,7 +12,7 @@ import org.yzh.web.commons.DateUtils;
 import org.yzh.web.model.enums.SessionKey;
 import org.yzh.web.model.vo.DeviceInfo;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
@@ -122,7 +122,7 @@ public class T0200 extends JTMessage {
             sb.append('[');
             sb.append("cid=").append(clientId);
             sb.append(",msg=").append(messageId);
-            sb.append(",ver=").append(versionNo);
+            sb.append(",ver=").append(protocolVersion);
             sb.append(",ser=").append(serialNo);
             sb.append(",prop=").append(properties);
             if (isSubpackage()) {
@@ -153,7 +153,7 @@ public class T0200 extends JTMessage {
         speedKph = speed / 10f;
         deviceTime = DateUtils.parse(dateTime);
 
-        DeviceInfo device = (DeviceInfo) session.getAttribute(SessionKey.DeviceInfo);
+        DeviceInfo device = SessionKey.getDeviceInfo(session);
         if (device != null) {
             deviceId = device.getDeviceId();
             plateNo = device.getPlateNo();
@@ -168,7 +168,7 @@ public class T0200 extends JTMessage {
     private transient double lng;
     private transient double lat;
     private transient float speedKph;
-    private transient Date deviceTime;
+    private transient LocalDateTime deviceTime;
 
     public String getDeviceId() {
         return deviceId;
@@ -190,7 +190,7 @@ public class T0200 extends JTMessage {
         return speedKph;
     }
 
-    public Date getDeviceTime() {
+    public LocalDateTime getDeviceTime() {
         return deviceTime;
     }
 }

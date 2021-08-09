@@ -14,11 +14,14 @@ public class DeviceInfo {
     private byte reserved;
     /** 设备ID */
     private String deviceId;
-
+    /** 终端ID */
+    private String clientId;
     /** 车牌颜色 */
     private byte plateColor;
     /** 车牌号 */
     private String plateNo;
+    /** 协议版本 */
+    private int protocolVersion;
 
     public DeviceInfo() {
     }
@@ -47,6 +50,14 @@ public class DeviceInfo {
         this.deviceId = deviceId;
     }
 
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
+
     public byte getPlateColor() {
         return plateColor;
     }
@@ -61,6 +72,14 @@ public class DeviceInfo {
 
     public void setPlateNo(String plateNo) {
         this.plateNo = plateNo;
+    }
+
+    public int getProtocolVersion() {
+        return protocolVersion;
+    }
+
+    public void setProtocolVersion(int protocolVersion) {
+        this.protocolVersion = protocolVersion;
     }
 
     public static DeviceInfo formBytes(byte[] bytes) {

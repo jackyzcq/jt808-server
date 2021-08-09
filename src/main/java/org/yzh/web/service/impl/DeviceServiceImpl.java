@@ -43,7 +43,7 @@ public class DeviceServiceImpl implements DeviceService {
         record.setMakerId(request.getMakerId());
         record.setCityId(request.getCityId());
         record.setProvinceId(request.getProvinceId());
-        record.setProtocolVersion(request.getVersionNo());
+        record.setProtocolVersion(request.getProtocolVersion());
         record.setDeviceTime(now);
         record.setRegisterTime(now);
         if (deviceDO == null || deviceDO.getInstallTime() == null)
@@ -61,6 +61,8 @@ public class DeviceServiceImpl implements DeviceService {
         DeviceInfo device = new DeviceInfo();
         device.setIssuedAt(LocalDate.now());
         device.setDeviceId(deviceId);
+        device.setClientId(request.getClientId());
+        device.setProtocolVersion(request.getProtocolVersion());
 
         device.setReserved((byte) 0);
         device.setPlateColor((byte) request.getPlateColor());
@@ -76,6 +78,8 @@ public class DeviceServiceImpl implements DeviceService {
             bytes = Base64.getDecoder().decode(token);
             bytes = EncryptUtils.decrypt(bytes);
             DeviceInfo device = DeviceInfo.formBytes(bytes);
+            device.setClientId(request.getClientId());
+            device.setProtocolVersion(request.getProtocolVersion());
 
             DeviceDO record = deviceMapper.get(device.getDeviceId());
             if (record != null) {
@@ -83,7 +87,7 @@ public class DeviceServiceImpl implements DeviceService {
 
                 record = new DeviceDO(device.getDeviceId(), true, LocalDateTime.now());
                 record.setImei(request.getImei());
-                record.setSoftwareVersion(request.getVersion());
+                record.setSoftwareVersion(request.getSoftwareVersion());
                 deviceMapper.update(record);
             }
             return device;

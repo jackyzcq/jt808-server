@@ -16,12 +16,19 @@ public class JTSessionListener implements SessionListener {
     private DeviceMapper deviceMapper;
 
     @Override
-    public void sessionCreated(Session se) {
+    public void sessionCreated(Session session) {
+    }
+
+    @Override
+    public void sessionRegistered(Session session) {
+        DeviceInfo device = SessionKey.getDeviceInfo(session);
+        if (device != null)
+            deviceMapper.update(new DeviceDO(device.getDeviceId(), true, LocalDateTime.now()));
     }
 
     @Override
     public void sessionDestroyed(Session session) {
-        DeviceInfo device = (DeviceInfo) session.getAttribute(SessionKey.DeviceInfo);
+        DeviceInfo device = SessionKey.getDeviceInfo(session);
         if (device != null)
             deviceMapper.update(new DeviceDO(device.getDeviceId(), false, LocalDateTime.now()));
     }
