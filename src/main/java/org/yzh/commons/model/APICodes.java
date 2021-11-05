@@ -1,11 +1,11 @@
-package org.yzh.web.model.enums;
-
-import org.yzh.web.commons.ResultCode;
+package org.yzh.commons.model;
 
 /**
- * Created by Alan.ye on 2017/5/20.
+ * 响应状态枚举类
+ * @author yezhihao
+ * @home https://gitee.com/yezhihao/jt808-server
  */
-public enum DefaultCodes implements ResultCode {
+public enum APICodes implements APICode {
 
     Success(200, ""),
     UnregisteredUser(402, "未注册的用户"),
@@ -18,11 +18,10 @@ public enum DefaultCodes implements ResultCode {
     OperationFailed(420, "操作失败"),
     UnknownError(500, "未知错误");
 
-    public final Integer code;
+    private final int code;
+    private final String message;
 
-    public final String message;
-
-    DefaultCodes(int code, String message) {
+    APICodes(int code, String message) {
         this.code = code;
         this.message = message;
     }

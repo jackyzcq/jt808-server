@@ -4,7 +4,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/JDK-1.8+-green.svg"></img>
     <img src="https://img.shields.io/badge/License-Apache 2.0-green.svg"></img>
-    <img src="https://img.shields.io/badge/QQ群-906230542-blue"></img>
+    <img src="https://img.shields.io/badge/QQ群-107751976-blue"></img>
 </p>
 
 # 项目介绍
@@ -37,6 +37,11 @@
 # 代码仓库
  * Gitee仓库地址：[https://gitee.com/yezhihao/jt808-server/tree/master](https://gitee.com/yezhihao/jt808-server/tree/master)
  * Github仓库地址：[https://github.com/yezhihao/jt808-server/tree/master](https://github.com/yezhihao/jt808-server/tree/master)
+
+# 演示
+ * 设备接入：81.68.215.202:7611
+ * 日志监控：http://81.68.215.202:8000/ws.html
+ * 接口文档：http://81.68.215.202:8000/doc.html
 
 # 验证步骤
 
@@ -241,7 +246,7 @@ src
 
 项目负责人QQ：[1527621790]
 
-技术交流QQ群：[906230542]
+技术交流QQ群：[107751976]
 
 - JT808泛指JT/T808协议，是指交通部制定的运输行业通信标准，全称《交通运输行业标准 - 道路运输车辆卫星定位系统终端通信协议及数据格式》
 

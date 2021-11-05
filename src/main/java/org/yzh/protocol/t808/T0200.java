@@ -8,7 +8,7 @@ import org.yzh.protocol.commons.JT808;
 import org.yzh.protocol.commons.MessageId;
 import org.yzh.protocol.commons.transform.AttributeConverter;
 import org.yzh.protocol.commons.transform.AttributeConverterYue;
-import org.yzh.web.commons.DateUtils;
+import org.yzh.commons.util.DateUtils;
 import org.yzh.web.model.enums.SessionKey;
 import org.yzh.web.model.vo.DeviceInfo;
 
@@ -147,25 +147,29 @@ public class T0200 extends JTMessage {
     //==================================
 
     @Override
-    public void transform() {
+    public boolean transform() {
         lng = longitude / 1000000d;
         lat = latitude / 1000000d;
         speedKph = speed / 10f;
-        deviceTime = DateUtils.parse(dateTime);
+        if (dateTime != null)
+            deviceTime = DateUtils.parse(dateTime);
 
         DeviceInfo device = SessionKey.getDeviceInfo(session);
         if (device != null) {
             deviceId = device.getDeviceId();
             plateNo = device.getPlateNo();
+            vehicleId = device.getVehicleId();
         } else {
             deviceId = clientId;
             plateNo = "";
         }
+        return deviceTime != null;
     }
 
     private transient boolean updated;
     private transient String deviceId;
     private transient String plateNo;
+    private transient int vehicleId;
     private transient double lng;
     private transient double lat;
     private transient float speedKph;
@@ -181,6 +185,10 @@ public class T0200 extends JTMessage {
 
     public String getPlateNo() {
         return plateNo;
+    }
+
+    public int getVehicleId() {
+        return vehicleId;
     }
 
     public double getLng() {

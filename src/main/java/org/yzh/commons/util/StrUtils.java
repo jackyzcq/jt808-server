@@ -1,4 +1,4 @@
-package org.yzh.web.commons;
+package org.yzh.commons.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -92,11 +92,10 @@ public class StrUtils {
         return result.toString();
     }
 
-    public static Map newMap(Object... entry) {
-        int size = entry.length / 2;
-        Map result = new HashMap((int) (size / 0.75d) + 1);
-        for (int i = 0; i < entry.length; )
-            result.put(entry[i++], entry[i++]);
+    public static Map newMap(Object... entrys) {
+        Map result = new HashMap((int) (entrys.length / 1.5) + 1);
+        for (int i = 0; i < entrys.length; )
+            result.put(entrys[i++], entrys[i++]);
         return result;
     }
 
